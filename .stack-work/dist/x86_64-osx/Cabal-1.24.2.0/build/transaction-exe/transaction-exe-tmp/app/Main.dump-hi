@@ -1,0 +1,2397 @@
+
+==================== FINAL INTERFACE ====================
+2017-10-02 01:02:19.958884 UTC
+
+interface main@main:Main 8002
+  interface hash: 2b560919aaec9528b0b337b34432d886
+  ABI hash: 2bcfc3b3920e0e701076e5f8a7c3a02a
+  export-list hash: b649f3dd2da567c8f1eb927bf2b8fdac
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f58b9bf178893249de22598ef7aef233
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Main.accountNum
+  Main.amount
+  Main.category
+  Main.change'
+  Main.clearFile
+  Main.clearingFile
+  Main.colorPutStr
+  Main.continue
+  Main.delete
+  Main.deleteLine
+  Main.description
+  Main.editTransaction
+  Main.file
+  Main.format
+  Main.formatHeaders
+  Main.formatTransactionOutput
+  Main.getDest
+  Main.getIncome
+  Main.getSum
+  Main.getTransaction
+  Main.getVals
+  Main.lookForFile
+  Main.main
+  Main.match'
+  Main.mergeData'
+  Main.names
+  Main.nextMove
+  Main.routeEditTransaction
+  Main.routingNumber
+  Main.sec
+  Main.uid
+  Main.update
+  Main.updateFile
+  Main.updatedAt
+  Main.user
+  Main.write
+  Main.Transaction{Main.Transaction _accountNum _amount _category _description _routingNumber _uid _updatedAt _user}
+module dependencies:
+package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp
+                      ansi-terminal-0.6.3.1@ansi-terminal-0.6.3.1-3RTqikoQf47ajVD9m8zgB
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      call-stack-0.1.0@call-stack-0.1.0-FYVrCPXGP9EGAuTW32963O
+                      comonad-5.0.2@comonad-5.0.2-Fq9Xy9jdx6uIyJZn00E6Yc
+                      containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-29zF0Im431177ovfbHYCGv
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      distributive-0.5.3@distributive-0.5.3-IX4kyVcHAyoH4uFYrsjY1R
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      free-4.12.4@free-4.12.4-C2gBQV0m8J42HxqSLTFyVx
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1
+                      kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX
+                      lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      old-locale-1.0.0.7@old-locale-1.0.0.7-KGBP1BSKxH5GCm0LnZP04j
+                      old-time-1.1.0.3@old-time-1.1.0.3-KWRsMSdY26c2L27Y9n9cyq
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-BhL9U5k7NtGJn1itwIHt2Y
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT
+                      reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4
+                      semigroupoids-5.2.1@semigroupoids-5.2.1-Db8txM8kTsI6Y49CY6g5Jn
+                      split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ
+                      time-1.6.0.1@time-1.6.0.1
+                      transaction-0.1.0.0@transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-IuFogs8HAVUJBWVNMhtssu
+                      unix-2.7.2.1@unix-2.7.2.1
+                      unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4:Data.Reflection
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime.Diff
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp:Data.Functor.Rep
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Biff
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Clown
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Fix
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Flip
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Join
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Joker
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Product
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Sum
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Tannen
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Wrapped
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Day
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Yoneda
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.At
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Internal.Indexed
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Reified
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Tuple
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Wrapped
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Zoom
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT:Data.Profunctor.Rep
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  ansi-terminal-0.6.3.1@ansi-terminal-0.6.3.1-3RTqikoQf47ajVD9m8zgB:System.Console.ANSI 6f9e98afbd24fbb5fc7a0ee1d84164e5
+import  -/  ansi-terminal-0.6.3.1@ansi-terminal-0.6.3.1-3RTqikoQf47ajVD9m8zgB:System.Console.ANSI.Types 26697b38c6e3b87a83080404e7fdcd6d
+import  -/  ansi-terminal-0.6.3.1@ansi-terminal-0.6.3.1-3RTqikoQf47ajVD9m8zgB:System.Console.ANSI.Unix 9653fb52be761a95ef20e1d8202d38e9
+import  -/  base-4.9.1.0:Control.Concurrent 2ee6a0a58489520b9a96d8fef10380fa
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Data.Bits d707ac81dd0124c7a7fb3234df2c8548
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Conc.IO def2d34849634fa07308965605821da6
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Read b6821365d2d5fa2155c9e910160e7f57
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:GHC.Unicode a175ecf20bf1272d9ae31337e7da43ab
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO c9de64c5f5407c4cf1c52500c4d15200
+import  -/  base-4.9.1.0:Text.ParserCombinators.ReadPrec 5a182a8d6deb0f7d67aed5fab08a5cc0
+import  -/  base-4.9.1.0:Text.Read 75c59863e882ebaec4532e9465e2ee9b
+import  -/  base-4.9.1.0:Text.Read.Lex 16199fac3c6c2d64cc7c268f3c0d2269
+import  -/  directory-1.3.0.0@directory-1.3.0.0:System.Directory 23e4e3d52f91c33b21f0667cd90aa164
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens 51c282815697462fb4c0814abcb89573
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Setter 2ba84291b39c66d4fb563b9eaed1d93d
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.TH ee2327b22bd8e33159fe319d450ee351
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Type 69935f8f37896297f57e4a0c66e745a8
+import  -/  split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT:Data.List.Split 272c5cfa667e04d85d90f02a3d135474
+import  -/  split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT:Data.List.Split.Internals be3228c161b442fb4a76d9ed8518c1ed
+import  -/  template-haskell-2.11.1.0:Language.Haskell.TH d856a1f9d606be57026da48a46c8b0a9
+import  -/  transaction-0.1.0.0@transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF:Lib 00daf2e4af599d8ee98168c920f76d7e
+import  -/  unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime 34ee891a10baf97f1ce65eb8d2c5de3e
+import  -/  unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime.Sys 7674c4bbcf1e5de2a58d39d850eb495a
+import  -/  unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime.Types e5700e4fdf011dd3e496b922659e53d6
+55cc0268cc98fc00cf82c1fd862e5204
+  $fEqTransaction :: GHC.Classes.Eq Main.Transaction
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Transaction
+                  Main.$fEqTransaction_$c==
+                  Main.$fEqTransaction_$c/= -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fEqTransaction_$c/= ::
+    Main.Transaction -> Main.Transaction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Main.Transaction) (b :: Main.Transaction) ->
+                 case Main.$fEqTransaction_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fEqTransaction_$c== ::
+    Main.Transaction -> Main.Transaction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Transaction) (w1 :: Main.Transaction) ->
+                 case w of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case w1 of ww9 { Main.Transaction ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
+                 Main.$w$c==
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17 } }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction :: GHC.Classes.Ord Main.Transaction
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Transaction
+                  Main.$fEqTransaction
+                  Main.$fOrdTransaction_$ccompare
+                  Main.$fOrdTransaction_$c<
+                  Main.$fOrdTransaction_$c<=
+                  Main.$fOrdTransaction_$c>
+                  Main.$fOrdTransaction_$c>=
+                  Main.$fOrdTransaction_$cmax
+                  Main.$fOrdTransaction_$cmin -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction_$c< ::
+    Main.Transaction -> Main.Transaction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Transaction) (w1 :: Main.Transaction) ->
+                 case w of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case w1 of ww9 { Main.Transaction ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
+                 Main.$w$c<
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17 } }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction_$c<= ::
+    Main.Transaction -> Main.Transaction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Transaction) (w1 :: Main.Transaction) ->
+                 case w of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case w1 of ww9 { Main.Transaction ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
+                 Main.$w$c<=
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17 } }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction_$c> ::
+    Main.Transaction -> Main.Transaction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Transaction) (w1 :: Main.Transaction) ->
+                 case w of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case w1 of ww9 { Main.Transaction ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
+                 Main.$w$c>
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17 } }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction_$c>= ::
+    Main.Transaction -> Main.Transaction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Transaction) (w1 :: Main.Transaction) ->
+                 case w of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case w1 of ww9 { Main.Transaction ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
+                 Main.$w$c>=
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17 } }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction_$ccompare ::
+    Main.Transaction -> Main.Transaction -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><S(SLLLLLLL),1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Transaction) (w1 :: Main.Transaction) ->
+                 case w of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case w1 of ww9 { Main.Transaction ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ->
+                 Main.$w$ccompare
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17 } }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction_$cmax ::
+    Main.Transaction -> Main.Transaction -> Main.Transaction
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),U(U,U,U,U,U,U,U,U)><S(SLLLLLLL),U(U,U,U,U,U,U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Main.Transaction) (y :: Main.Transaction) ->
+                 case Main.$fOrdTransaction_$c<= x y of wild {
+                   GHC.Types.False -> x GHC.Types.True -> y }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fOrdTransaction_$cmin ::
+    Main.Transaction -> Main.Transaction -> Main.Transaction
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),U(U,U,U,U,U,U,U,U)><S(SLLLLLLL),U(U,U,U,U,U,U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Main.Transaction) (y :: Main.Transaction) ->
+                 case Main.$fOrdTransaction_$c<= x y of wild {
+                   GHC.Types.False -> y GHC.Types.True -> x }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction :: GHC.Read.Read Main.Transaction
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Transaction
+                  Main.$fReadTransaction_$creadsPrec
+                  Main.$fReadTransaction_$creadList
+                  Main.$fReadTransaction_$creadPrec
+                  Main.$fReadTransaction_$creadListPrec -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Main.Transaction] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Main.Transaction] -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.list1
+                   @ Main.Transaction
+                   Main.$fReadTransaction2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Main.Transaction>_R))
+                   eta
+                   @ b
+                   eta1) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP Main.Transaction
+  {- Arity: 1,
+     Unfolding: (GHC.Read.parens1
+                   @ Main.Transaction
+                   Main.$fReadTransaction3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <Main.Transaction>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <Main.Transaction>_R)))) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Main.Transaction -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (w1 :: Main.Transaction -> Text.ParserCombinators.ReadP.P b) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Main.$w$creadPrec ww1 @ b w1 }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction4 ::
+    Text.ParserCombinators.ReadP.P [Main.Transaction]
+  {- Unfolding: (GHC.Read.list1
+                   @ Main.Transaction
+                   Main.$fReadTransaction2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Main.Transaction>_R))
+                   GHC.Read.$fRead()5
+                   @ [Main.Transaction]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [Main.Transaction])) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [Main.Transaction]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [Main.Transaction]
+                   Main.$fReadTransaction4) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec [Main.Transaction]
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fReadTransaction1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                    <[Main.Transaction]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <[Main.Transaction]>_R))) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec Main.Transaction
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fReadTransaction2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                          <Main.Transaction>_R)) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fReadTransaction_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS Main.Transaction
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ Main.Transaction
+                   ((GHC.Read.parens1
+                       @ Main.Transaction
+                       Main.$fReadTransaction3
+                         `cast`
+                       (Trans
+                            (<Text.ParserCombinators.ReadPrec.Prec>_R
+                             ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                           <Main.Transaction>_R))
+                            (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                      <Main.Transaction>_R)))
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <Main.Transaction>_R)
+                      @ Main.Transaction
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ Main.Transaction))) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fShowTransaction :: GHC.Show.Show Main.Transaction
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Transaction
+                  Main.$fShowTransaction_$cshowsPrec
+                  Main.$fShowTransaction_$cshow
+                  Main.$fShowTransaction_$cshowList -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fShowTransaction1 :: Main.Transaction -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Main.Transaction) (w1 :: GHC.Base.String) ->
+                 case w of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 Main.$w$cshowsPrec 0# ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 w1 }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fShowTransaction_$cshow :: Main.Transaction -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Main.Transaction) ->
+                 Main.$fShowTransaction_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fShowTransaction_$cshowList ::
+    [Main.Transaction] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Main.Transaction
+                   Main.$fShowTransaction1) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $fShowTransaction_$cshowsPrec ::
+    GHC.Types.Int -> Main.Transaction -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.Transaction)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Main.Transaction ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ->
+                 Main.$w$cshowsPrec ww1 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 w2 } }) -}
+c84c48e4de94597cdcb29a4c43bec533
+  $tc'Transaction :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11003510976025690688##
+                   10899681922975793847##
+                   Main.$trModule
+                   Main.$tc'Transaction1) -}
+484abd46d95b7ed8f30970b517d31b61
+  $tc'Transaction1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Transaction"#) -}
+4cd182ec0c26d58e2cb6df95c6a040c2
+  $tcTransaction :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14807809801147800200##
+                   13180242393301684636##
+                   Main.$trModule
+                   Main.$tcTransaction1) -}
+4546001a7bb3d33486569787c96254a9
+  $tcTransaction1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Transaction"#) -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+6bb418d7388e7e53d3dc78087b00e66a
+  $w$c< ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 16, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String)
+                   (ww6 :: GHC.Base.String)
+                   (ww7 :: GHC.Base.String)
+                   (ww8 :: GHC.Base.String)
+                   (ww9 :: GHC.Base.String)
+                   (ww10 :: GHC.Base.String)
+                   (ww11 :: GHC.Base.String)
+                   (ww12 :: GHC.Base.String)
+                   (ww13 :: GHC.Base.String)
+                   (ww14 :: GHC.Base.String)
+                   (ww15 :: GHC.Base.String) ->
+                 case GHC.Classes.$fOrd[]_$s$ccompare1 ww ww8 of wild {
+                   GHC.Types.LT -> GHC.Types.True
+                   GHC.Types.EQ
+                   -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww1 ww9 of wild1 {
+                        GHC.Types.LT -> GHC.Types.True
+                        GHC.Types.EQ
+                        -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww2 ww10 of wild2 {
+                             GHC.Types.LT -> GHC.Types.True
+                             GHC.Types.EQ
+                             -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww3 ww11 of wild3 {
+                                  GHC.Types.LT -> GHC.Types.True
+                                  GHC.Types.EQ
+                                  -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww4 ww12 of wild4 {
+                                       GHC.Types.LT -> GHC.Types.True
+                                       GHC.Types.EQ
+                                       -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww5 ww13 of wild5 {
+                                            GHC.Types.LT -> GHC.Types.True
+                                            GHC.Types.EQ
+                                            -> case GHC.Classes.$fOrd[]_$s$ccompare1
+                                                      ww6
+                                                      ww14 of wild6 {
+                                                 GHC.Types.LT -> GHC.Types.True
+                                                 GHC.Types.EQ -> GHC.Classes.$fOrd[]_$s$c<1 ww7 ww15
+                                                 GHC.Types.GT -> GHC.Types.False }
+                                            GHC.Types.GT -> GHC.Types.False }
+                                       GHC.Types.GT -> GHC.Types.False }
+                                  GHC.Types.GT -> GHC.Types.False }
+                             GHC.Types.GT -> GHC.Types.False }
+                        GHC.Types.GT -> GHC.Types.False }
+                   GHC.Types.GT -> GHC.Types.False }) -}
+a7d689a167110c9a102487fc905e72fe
+  $w$c<= ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 16, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String)
+                   (ww6 :: GHC.Base.String)
+                   (ww7 :: GHC.Base.String)
+                   (ww8 :: GHC.Base.String)
+                   (ww9 :: GHC.Base.String)
+                   (ww10 :: GHC.Base.String)
+                   (ww11 :: GHC.Base.String)
+                   (ww12 :: GHC.Base.String)
+                   (ww13 :: GHC.Base.String)
+                   (ww14 :: GHC.Base.String)
+                   (ww15 :: GHC.Base.String) ->
+                 case GHC.Classes.$fOrd[]_$s$ccompare1 ww ww8 of wild {
+                   GHC.Types.LT -> GHC.Types.True
+                   GHC.Types.EQ
+                   -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww1 ww9 of wild1 {
+                        GHC.Types.LT -> GHC.Types.True
+                        GHC.Types.EQ
+                        -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww2 ww10 of wild2 {
+                             GHC.Types.LT -> GHC.Types.True
+                             GHC.Types.EQ
+                             -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww3 ww11 of wild3 {
+                                  GHC.Types.LT -> GHC.Types.True
+                                  GHC.Types.EQ
+                                  -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww4 ww12 of wild4 {
+                                       GHC.Types.LT -> GHC.Types.True
+                                       GHC.Types.EQ
+                                       -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww5 ww13 of wild5 {
+                                            GHC.Types.LT -> GHC.Types.True
+                                            GHC.Types.EQ
+                                            -> case GHC.Classes.$fOrd[]_$s$ccompare1
+                                                      ww6
+                                                      ww14 of wild6 {
+                                                 GHC.Types.LT -> GHC.Types.True
+                                                 GHC.Types.EQ
+                                                 -> GHC.Classes.$fOrd[]_$s$c<=1 ww7 ww15
+                                                 GHC.Types.GT -> GHC.Types.False }
+                                            GHC.Types.GT -> GHC.Types.False }
+                                       GHC.Types.GT -> GHC.Types.False }
+                                  GHC.Types.GT -> GHC.Types.False }
+                             GHC.Types.GT -> GHC.Types.False }
+                        GHC.Types.GT -> GHC.Types.False }
+                   GHC.Types.GT -> GHC.Types.False }) -}
+c964539a5283f0b34713ea309b880e60
+  $w$c== ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 16, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String)
+                   (ww6 :: GHC.Base.String)
+                   (ww7 :: GHC.Base.String)
+                   (ww8 :: GHC.Base.String)
+                   (ww9 :: GHC.Base.String)
+                   (ww10 :: GHC.Base.String)
+                   (ww11 :: GHC.Base.String)
+                   (ww12 :: GHC.Base.String)
+                   (ww13 :: GHC.Base.String)
+                   (ww14 :: GHC.Base.String)
+                   (ww15 :: GHC.Base.String) ->
+                 case GHC.Base.eqString ww ww8 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Base.eqString ww1 ww9 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Base.eqString ww2 ww10 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Base.eqString ww3 ww11 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case GHC.Base.eqString ww4 ww12 of wild4 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True
+                                       -> case GHC.Base.eqString ww5 ww13 of wild5 {
+                                            GHC.Types.False -> GHC.Types.False
+                                            GHC.Types.True
+                                            -> case GHC.Base.eqString ww6 ww14 of wild6 {
+                                                 GHC.Types.False -> GHC.Types.False
+                                                 GHC.Types.True
+                                                 -> GHC.Base.eqString ww7 ww15 } } } } } } }) -}
+9491e9925c4a4b2df8e2d2e73b928667
+  $w$c> ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 16, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String)
+                   (ww6 :: GHC.Base.String)
+                   (ww7 :: GHC.Base.String)
+                   (ww8 :: GHC.Base.String)
+                   (ww9 :: GHC.Base.String)
+                   (ww10 :: GHC.Base.String)
+                   (ww11 :: GHC.Base.String)
+                   (ww12 :: GHC.Base.String)
+                   (ww13 :: GHC.Base.String)
+                   (ww14 :: GHC.Base.String)
+                   (ww15 :: GHC.Base.String) ->
+                 case GHC.Classes.$fOrd[]_$s$ccompare1 ww ww8 of wild {
+                   GHC.Types.LT -> GHC.Types.False
+                   GHC.Types.EQ
+                   -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww1 ww9 of wild1 {
+                        GHC.Types.LT -> GHC.Types.False
+                        GHC.Types.EQ
+                        -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww2 ww10 of wild2 {
+                             GHC.Types.LT -> GHC.Types.False
+                             GHC.Types.EQ
+                             -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww3 ww11 of wild3 {
+                                  GHC.Types.LT -> GHC.Types.False
+                                  GHC.Types.EQ
+                                  -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww4 ww12 of wild4 {
+                                       GHC.Types.LT -> GHC.Types.False
+                                       GHC.Types.EQ
+                                       -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww5 ww13 of wild5 {
+                                            GHC.Types.LT -> GHC.Types.False
+                                            GHC.Types.EQ
+                                            -> case GHC.Classes.$fOrd[]_$s$ccompare1
+                                                      ww6
+                                                      ww14 of wild6 {
+                                                 GHC.Types.LT -> GHC.Types.False
+                                                 GHC.Types.EQ -> GHC.Classes.$fOrd[]_$s$c>1 ww7 ww15
+                                                 GHC.Types.GT -> GHC.Types.True }
+                                            GHC.Types.GT -> GHC.Types.True }
+                                       GHC.Types.GT -> GHC.Types.True }
+                                  GHC.Types.GT -> GHC.Types.True }
+                             GHC.Types.GT -> GHC.Types.True }
+                        GHC.Types.GT -> GHC.Types.True }
+                   GHC.Types.GT -> GHC.Types.True }) -}
+a68f71f6a19171b616b4949478e038a7
+  $w$c>= ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 16, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String)
+                   (ww6 :: GHC.Base.String)
+                   (ww7 :: GHC.Base.String)
+                   (ww8 :: GHC.Base.String)
+                   (ww9 :: GHC.Base.String)
+                   (ww10 :: GHC.Base.String)
+                   (ww11 :: GHC.Base.String)
+                   (ww12 :: GHC.Base.String)
+                   (ww13 :: GHC.Base.String)
+                   (ww14 :: GHC.Base.String)
+                   (ww15 :: GHC.Base.String) ->
+                 case GHC.Classes.$fOrd[]_$s$ccompare1 ww ww8 of wild {
+                   GHC.Types.LT -> GHC.Types.False
+                   GHC.Types.EQ
+                   -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww1 ww9 of wild1 {
+                        GHC.Types.LT -> GHC.Types.False
+                        GHC.Types.EQ
+                        -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww2 ww10 of wild2 {
+                             GHC.Types.LT -> GHC.Types.False
+                             GHC.Types.EQ
+                             -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww3 ww11 of wild3 {
+                                  GHC.Types.LT -> GHC.Types.False
+                                  GHC.Types.EQ
+                                  -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww4 ww12 of wild4 {
+                                       GHC.Types.LT -> GHC.Types.False
+                                       GHC.Types.EQ
+                                       -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww5 ww13 of wild5 {
+                                            GHC.Types.LT -> GHC.Types.False
+                                            GHC.Types.EQ
+                                            -> case GHC.Classes.$fOrd[]_$s$ccompare1
+                                                      ww6
+                                                      ww14 of wild6 {
+                                                 GHC.Types.LT -> GHC.Types.False
+                                                 GHC.Types.EQ
+                                                 -> GHC.Classes.$fOrd[]_$s$c>=1 ww7 ww15
+                                                 GHC.Types.GT -> GHC.Types.True }
+                                            GHC.Types.GT -> GHC.Types.True }
+                                       GHC.Types.GT -> GHC.Types.True }
+                                  GHC.Types.GT -> GHC.Types.True }
+                             GHC.Types.GT -> GHC.Types.True }
+                        GHC.Types.GT -> GHC.Types.True }
+                   GHC.Types.GT -> GHC.Types.True }) -}
+b7d910d468100c8de8e15d4ef97a9d73
+  $w$ccompare ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Ordering
+  {- Arity: 16, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><S,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Base.String)
+                   (ww3 :: GHC.Base.String)
+                   (ww4 :: GHC.Base.String)
+                   (ww5 :: GHC.Base.String)
+                   (ww6 :: GHC.Base.String)
+                   (ww7 :: GHC.Base.String)
+                   (ww8 :: GHC.Base.String)
+                   (ww9 :: GHC.Base.String)
+                   (ww10 :: GHC.Base.String)
+                   (ww11 :: GHC.Base.String)
+                   (ww12 :: GHC.Base.String)
+                   (ww13 :: GHC.Base.String)
+                   (ww14 :: GHC.Base.String)
+                   (ww15 :: GHC.Base.String) ->
+                 case GHC.Classes.$fOrd[]_$s$ccompare1 ww ww8 of wild {
+                   GHC.Types.LT -> GHC.Types.LT
+                   GHC.Types.EQ
+                   -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww1 ww9 of wild1 {
+                        GHC.Types.LT -> GHC.Types.LT
+                        GHC.Types.EQ
+                        -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww2 ww10 of wild2 {
+                             GHC.Types.LT -> GHC.Types.LT
+                             GHC.Types.EQ
+                             -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww3 ww11 of wild3 {
+                                  GHC.Types.LT -> GHC.Types.LT
+                                  GHC.Types.EQ
+                                  -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww4 ww12 of wild4 {
+                                       GHC.Types.LT -> GHC.Types.LT
+                                       GHC.Types.EQ
+                                       -> case GHC.Classes.$fOrd[]_$s$ccompare1 ww5 ww13 of wild5 {
+                                            GHC.Types.LT -> GHC.Types.LT
+                                            GHC.Types.EQ
+                                            -> case GHC.Classes.$fOrd[]_$s$ccompare1
+                                                      ww6
+                                                      ww14 of wild6 {
+                                                 GHC.Types.LT -> GHC.Types.LT
+                                                 GHC.Types.EQ
+                                                 -> GHC.Classes.$fOrd[]_$s$ccompare1 ww7 ww15
+                                                 GHC.Types.GT -> GHC.Types.GT }
+                                            GHC.Types.GT -> GHC.Types.GT }
+                                       GHC.Types.GT -> GHC.Types.GT }
+                                  GHC.Types.GT -> GHC.Types.GT }
+                             GHC.Types.GT -> GHC.Types.GT }
+                        GHC.Types.GT -> GHC.Types.GT }
+                   GHC.Types.GT -> GHC.Types.GT }) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  $w$creadPrec ::
+    GHC.Prim.Int#
+    -> forall b.
+       (Main.Transaction -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,U><L,C(U)>, Inline: [0] -}
+6df3414864f9964c7f5135181b91ba25
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 10,
+     Strictness: <S,U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,U>,
+     Inline: [0] -}
+a5f1ee53aa514727f04987f135d4b4c8
+  $wformat ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Base.String)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.-# ww 1#
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># 1# y) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        go3 :: GHC.Prim.Int#
+                               -> GHC.Prim.State# GHC.Prim.RealWorld
+                               -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                          {- Arity: 2, Strictness: <L,U><L,U> -}
+                        = \ (x :: GHC.Prim.Int#)
+                            (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                          case {__pkg_ccall base-4.9.1.0 rtsSupportsBoundThreads GHC.Prim.State#
+                                                                                   GHC.Prim.RealWorld
+                                                                                 -> (# GHC.Prim.State#
+                                                                                         GHC.Prim.RealWorld,
+                                                                                       GHC.Prim.Int# #)}
+                                 GHC.Prim.realWorld# of wild1 { (#,#) ds ds1 ->
+                          case ds1 of wild2 {
+                            DEFAULT
+                            -> case GHC.Event.Thread.$wthreadDelay
+                                      (GHC.Prim.*# x 5#)
+                                      eta of ds2 { (#,#) ipv ipv1 ->
+                               case GHC.IO.Handle.Text.hPutStr2
+                                      GHC.IO.Handle.FD.stdout
+                                      w
+                                      GHC.Types.False
+                                      ipv of ds3 { (#,#) ipv2 ipv3 ->
+                               case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.==# x y) of wild3 {
+                                 GHC.Types.False -> go3 (GHC.Prim.+# x 1#) ipv2
+                                 GHC.Types.True -> (# ipv2, GHC.Tuple.() #) } } }
+                            0#
+                            -> case GHC.Prim.delay#
+                                      @ GHC.Prim.RealWorld
+                                      (GHC.Prim.*# x 5#)
+                                      eta of s' { DEFAULT ->
+                               case GHC.IO.Handle.Text.hPutStr2
+                                      GHC.IO.Handle.FD.stdout
+                                      w
+                                      GHC.Types.False
+                                      s' of ds2 { (#,#) ipv ipv1 ->
+                               case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.==# x y) of wild3 {
+                                 GHC.Types.False -> go3 (GHC.Prim.+# x 1#) ipv
+                                 GHC.Types.True -> (# ipv, GHC.Tuple.() #) } } } } }
+                      } in
+                      case go3 1# w1 of ds1 { (#,#) ipv ipv1 ->
+                      GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        GHC.Types.True
+                        ipv }
+                   GHC.Types.True
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        GHC.Types.True
+                        w1 }) -}
+eefbf93bac9cc9d8e6be3131e937dc82
+  $wmergeData' ::
+    (Main.Transaction -> Main.Transaction)
+    -> [Main.Transaction]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <L,C(U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U))><S,1*U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: Main.Transaction -> Main.Transaction)
+                   (w1 :: [Main.Transaction])
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 letrec {
+                   go3 :: [Main.Transaction]
+                          -> GHC.Prim.State# GHC.Prim.RealWorld
+                          -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [Main.Transaction])
+                       (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       [] -> (# eta, GHC.Tuple.() #)
+                       : y ys
+                       -> case GHC.IO.Handle.Text.hPutStr2
+                                 GHC.IO.Handle.FD.stdout
+                                 (case w y of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                                  Main.$w$cshowsPrec
+                                    0#
+                                    ww1
+                                    ww2
+                                    ww3
+                                    ww4
+                                    ww5
+                                    ww6
+                                    ww7
+                                    ww8
+                                    (GHC.Types.[] @ GHC.Types.Char) })
+                                 GHC.Types.True
+                                 eta of ds1 { (#,#) ipv ipv1 ->
+                          go3 ys ipv } }
+                 } in
+                 go3 w1 w2) -}
+55cc0268cc98fc00cf82c1fd862e5204
+  data Transaction
+    = Transaction {_uid :: GHC.Base.String,
+                   _user :: GHC.Base.String,
+                   _accountNum :: GHC.Base.String,
+                   _routingNumber :: GHC.Base.String,
+                   _category :: GHC.Base.String,
+                   _description :: GHC.Base.String,
+                   _amount :: GHC.Base.String,
+                   _updatedAt :: GHC.Base.String}
+6b6fddf14b9a3f45b3107b9c98f153e7
+  _accountNum :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLLLL),1*U(A,A,1*U,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds3 }) -}
+901925a8ad080f840ee72dfbfcc6d6ac
+  _amount :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLSL),1*U(A,A,A,A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds7 }) -}
+383f46a1455a32c88898f6399856a565
+  _category :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSLLL),1*U(A,A,A,A,1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds5 }) -}
+fcb988c90f514b0cd1c76c89bda97c74
+  _description :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLSLL),1*U(A,A,A,A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds6 }) -}
+1d916ac79fe86c21fbf0276eba2e353f
+  _routingNumber :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLLLL),1*U(A,A,A,1*U,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds4 }) -}
+62dee5a086018b0ef59eefb88de1d4b1
+  _uid :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLLLL),1*U(1*U,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds1 }) -}
+5041070a3ffee3807732d97930d0f055
+  _updatedAt :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLS),1*U(A,A,A,A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds8 }) -}
+51761885624e5f8f4be5412bef8889bd
+  _user :: Main.Transaction -> GHC.Base.String
+  RecSel Left Main.Transaction
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLLLL),1*U(A,1*U,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 ds2 }) -}
+4bc46be1b27c8b6d3a3c7cc34dc64d94
+  accountNum ::
+    Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction x1 x2 y1 x4 x5 x6 x7 x8)
+                   (f1 x3) }) -}
+7bb5aadc521a51e7e372b543275e148b
+  amount :: Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction x1 x2 x3 x4 x5 x6 y1 x8)
+                   (f1 x7) }) -}
+96711c26f5bfddb6396370f94e2961ad
+  category ::
+    Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction x1 x2 x3 x4 y1 x6 x7 x8)
+                   (f1 x5) }) -}
+88e406c6da8e437afa9ba727882a9f67
+  change' ::
+    (Main.Transaction -> Main.Transaction)
+    -> GHC.Base.String -> [Main.Transaction] -> GHC.Types.IO ()
+  {- Arity: 4,
+     Strictness: <L,C(U(A,1*U,1*U,1*U,1*U,1*U,1*U,1*U))><L,U><S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.change'1
+                  `cast`
+                (<Main.Transaction -> Main.Transaction>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R <[Main.Transaction]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+33cb92a74b285c41f5093efe8f8d4dac
+  change'1 ::
+    (Main.Transaction -> Main.Transaction)
+    -> GHC.Base.String
+    -> [Main.Transaction]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,C(U(A,1*U,1*U,1*U,1*U,1*U,1*U,1*U))><L,U><S,1*U><S,U>,
+     Unfolding: (\ (l :: Main.Transaction -> Main.Transaction)
+                   (uidValue :: GHC.Base.String)
+                   (eta :: [Main.Transaction])
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 letrec {
+                   go3 :: [Main.Transaction]
+                          -> GHC.Prim.State# GHC.Prim.RealWorld
+                          -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [Main.Transaction])
+                       (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       [] -> (# eta2, GHC.Tuple.() #)
+                       : y ys
+                       -> case GHC.IO.Handle.Text.hPutStr2
+                                 GHC.IO.Handle.FD.stdout
+                                 (case l y of wild1 { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                                  Main.$w$cshowsPrec
+                                    0#
+                                    uidValue
+                                    x2
+                                    x3
+                                    x4
+                                    x5
+                                    x6
+                                    x7
+                                    x8
+                                    (GHC.Types.[] @ GHC.Types.Char) })
+                                 GHC.Types.True
+                                 eta2 of ds1 { (#,#) ipv ipv1 ->
+                          go3 ys ipv } }
+                 } in
+                 go3 eta eta1) -}
+e63775ad882bdc4e6cbc4d9d0da73239
+  clearFile :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.clearFile1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+692dcc8a76117ab6dcfb495018713544
+  clearFile1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+f646c45e94ebd788bb2b84cd6b0160bb
+  clearingFile :: [GHC.Types.Char] -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.clearingFile1
+                  `cast`
+                (<[GHC.Types.Char]>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+37ee88f04889862a54056b39b9eff722
+  clearingFile1 ::
+    [GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+e8f751b7d3e0fff20ca9abccecaa5865
+  colorPutStr ::
+    GHC.Base.String
+    -> System.Console.ANSI.Types.Color -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.colorPutStr1
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R <System.Console.ANSI.Types.Color>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+a8aeba25cfb2118d14e75a20f884ccfb
+  colorPutStr1 ::
+    GHC.Base.String
+    -> System.Console.ANSI.Types.Color
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U><L,U><S,U>,
+     Unfolding: (\ (x :: GHC.Base.String)
+                   (color :: System.Console.ANSI.Types.Color)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (System.Console.ANSI.Codes.csi
+                           (GHC.Types.:
+                              @ GHC.Types.Int
+                              (case System.Console.ANSI.Codes.$wsgrToCode
+                                      (System.Console.ANSI.Types.SetColor
+                                         System.Console.ANSI.Types.Foreground
+                                         System.Console.ANSI.Types.Vivid
+                                         color) of ww { DEFAULT ->
+                               GHC.Types.I# ww })
+                              (GHC.Types.[] @ GHC.Types.Int))
+                           System.Console.ANSI.Codes.setSGRCode1)
+                        GHC.Types.False
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        x
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.colorPutStr2
+                   GHC.Types.False
+                   ipv2 } }) -}
+d92e62d5cc6fd918d1fe3beae7aa99ed
+  colorPutStr2 :: GHC.Base.String
+  {- Unfolding: (System.Console.ANSI.Codes.csi
+                   Main.colorPutStr3
+                   System.Console.ANSI.Codes.setSGRCode1) -}
+f21ed7c065ca49e0386cec872054f01f
+  colorPutStr3 :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.colorPutStr4
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+1289a8baac6910dbc0b560c1dba0a89c
+  colorPutStr4 :: GHC.Types.Int
+  {- Unfolding: (case System.Console.ANSI.Codes.$wsgrToCode
+                        System.Console.ANSI.Types.Reset of ww { DEFAULT ->
+                 GHC.Types.I# ww }) -}
+5f30415995ebfdd42e2a71bb58173154
+  continue :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.continue1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+53ff7d6443dbbd951efd3032826043f6
+  continue1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+0b7a03b2c6a9103744b49b8c51fed227
+  delete :: GHC.Base.String -> [Main.Transaction] -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U><L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.delete1
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R <[Main.Transaction]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+c0952d01381d3d90424764b67fc41e6f
+  delete1 ::
+    GHC.Base.String
+    -> [Main.Transaction]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U><L,1*U><S,U>,
+     Unfolding: (\ (del :: GHC.Base.String)
+                   (y :: [Main.Transaction])
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.IO.writeFile1
+                        Main.file
+                        (GHC.Types.[] @ GHC.Types.Char)
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 letrec {
+                   go3 :: [Main.Transaction]
+                          -> GHC.Prim.State# GHC.Prim.RealWorld
+                          -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [Main.Transaction])
+                       (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ds of wild {
+                       [] -> (# eta1, GHC.Tuple.() #)
+                       : y1 ys
+                       -> case y1 of wild1 { Main.Transaction ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                          case GHC.Classes.$fEq[]_$s$c==1 ds2 del of wild2 {
+                            GHC.Types.False
+                            -> case System.IO.appendFile1
+                                      Main.file
+                                      (Main.$w$cshowsPrec
+                                         0#
+                                         ds2
+                                         ds3
+                                         ds4
+                                         ds5
+                                         ds6
+                                         ds7
+                                         ds8
+                                         ds9
+                                         (GHC.Types.[] @ GHC.Types.Char))
+                                      eta1 of ds10 { (#,#) ipv2 ipv3 ->
+                               case Main.delete2 ipv2 of ds11 { (#,#) ipv4 ipv5 -> go3 ys ipv4 } }
+                            GHC.Types.True -> go3 ys eta1 } } }
+                 } in
+                 go3 y ipv }) -}
+879887c955b86bd2cb64e983a41b3e34
+  delete2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.IO.appendFile1
+                        Main.file
+                        Main.delete4
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Main.colorPutStr1
+                        Main.delete3
+                        System.Console.ANSI.Types.Green
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 System.Console.ANSI.Unix.clearScreen1 ipv2 } }) -}
+c4c7d67ab76598d0c7e8b09fed7e505b
+  delete3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "RECORDED TRANSACTION."#) -}
+be763105470ffe3897184514a757983c
+  delete4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "\n"#) -}
+74b2a146e276842d0cfb52f663166e9c
+  deleteLine :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.deleteLine1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+53af4cc08f8d59c6dfe3800e01aba8ea
+  deleteLine1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.file
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.deleteLine3
+                        GHC.Types.True
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case Main.deleteLine2
+                        (Data.OldList.lines ipv3)
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 Main.delete1 ipv7 ipv9 ipv8 } } } } }) -}
+145b743e196b27b3209aa1dee16f0928
+  deleteLine2 ::
+    [GHC.Base.String]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Main.Transaction] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+d76ec5909f5c3bbc2686447b0268dc6a
+  deleteLine3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Which Line do you want to delete?"#) -}
+117e04379fb59088960de498d0d38c17
+  description ::
+    Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction x1 x2 x3 x4 x5 y1 x7 x8)
+                   (f1 x6) }) -}
+083c2b003a5615fb5a05d0005b82176e
+  editTransaction :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.editTransaction1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+33d75de3241bc78f582b473768462966
+  editTransaction1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.file
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Main.editTransaction7
+                        (Data.OldList.lines ipv3)
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.editTransaction6
+                        GHC.Types.True
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 case GHC.List.filter
+                        @ Main.Transaction
+                        (\ (x :: Main.Transaction) ->
+                         case x of wild { Main.Transaction ds ds6 ds7 ds8 ds9 ds10 ds11 ds12 ->
+                         GHC.Base.eqString ds ipv9 })
+                        ipv5 of wild {
+                   []
+                   -> Main.colorPutStr1
+                        Main.editTransaction5
+                        System.Console.ANSI.Types.Red
+                        ipv8
+                   : first ds
+                   -> case Main.colorPutStr1
+                             Main.editTransaction4
+                             System.Console.ANSI.Types.Red
+                             ipv8 of ds6 { (#,#) ipv10 ipv11 ->
+                      case Main.editTransaction3
+                             first
+                             ipv10 of ds7 { (#,#) ipv12 ipv13 ->
+                      Main.editTransaction2 ipv5 first ipv9 ipv12 } } } } } } } }) -}
+85492a719a42621644e03189b2995868
+  editTransaction2 ::
+    [Main.Transaction]
+    -> Main.Transaction
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,1*U><L,1*U(U,U,U,U,U,U,U,U)><L,U><S,U> -}
+136da88cdb88cbfa86b843afdf3984da
+  editTransaction3 ::
+    Main.Transaction
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,1*U,1*U,1*U,1*U,U,U)><S,U> -}
+dbfb8fd4923fd0d489563c72800636b3
+  editTransaction4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "ID | Amount ($) | User | Routing # | Category | Description | Account # | Updated At "#) -}
+422070295d1294b0828106a1b00d5c46
+  editTransaction5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "No Records Available"#) -}
+e549583ee7236bf4790304792280a698
+  editTransaction6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Which record do you want to edit?"#) -}
+f83ac3c31077c570259f47fda140d690
+  editTransaction7 ::
+    [GHC.Base.String]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Main.Transaction] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+2613b93b855b9bc20b933e684ec3e9eb
+  file :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "./transactions.txt"#) -}
+53c799fc852d7507a6bbf3220331dcf3
+  format :: GHC.Types.Int -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.format1
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+599320b3520390319638db7e5231d267
+  format1 ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S(S),1*U(U)><L,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GHC.Base.String)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { GHC.Types.I# ww1 -> Main.$wformat ww1 w1 w2 }) -}
+3e4a91dedd9f656c277dc60079eaec98
+  formatHeaders :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.formatHeaders1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+7b7acc50ada25b43d6658c925e2b523e
+  formatHeaders1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (Main.colorPutStr1
+                   Main.editTransaction4
+                   System.Console.ANSI.Types.Red) -}
+fd8e089003dcecd28ab3c86f20b271db
+  formatTransactionOutput :: Main.Transaction -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,1*U,1*U,1*U,1*U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.editTransaction3
+                  `cast`
+                (<Main.Transaction>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+b4526af1415427edb1d082c8730b9d82
+  getDest :: GHC.Types.Bool -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getDest1
+                  `cast`
+                (<GHC.Types.Bool>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+1f200a64b20a9cac61837684f131c189
+  getDest1 ::
+    GHC.Types.Bool
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+2f6cd591f317dd26408c655038636a9b
+  getIncome :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getIncome1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+077bf55e0386f737e8f89406e1b880a3
+  getIncome1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+d6ad49b952301d0f4c4016767100e151
+  getSum :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getSum1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+cca56493580efa683196ff08a0063469
+  getSum1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+bbeb849ba5a135ef0e688198bad5b03f
+  getTransaction :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getTransaction1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+ded6446492a8174eeda55bc2cdd3b45b
+  getTransaction1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Data.UnixTime.Sys.getUnixTime1 s of ds1 { (#,#) ipv ipv1 ->
+                 Main.getTransaction2 ipv1 ipv }) -}
+3ad3f7d09f3d8067b118d0cd8d87997c
+  getTransaction2 ::
+    Data.UnixTime.Types.UnixTime
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U(U,A)><S,U> -}
+3f00cf361455d863b9235f49f09b07ca
+  getVals :: GHC.Types.IO [GHC.Base.String]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getVals1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)) -}
+2060c701b9e646110d31056335698896
+  getVals1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.getVals3
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.getVals2
+                        GHC.Types.True
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case Data.UnixTime.Sys.getUnixTime1
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 (# ipv8,
+                    GHC.Types.:
+                      @ GHC.Base.String
+                      ipv3
+                      (GHC.Types.:
+                         @ GHC.Base.String
+                         ipv7
+                         (GHC.Types.:
+                            @ GHC.Base.String
+                            (case ipv9 of wild { Data.UnixTime.Types.UnixTime dt dt1 ->
+                             case GHC.Show.$wshowSignedInt
+                                    0#
+                                    dt
+                                    (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                             GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                            (GHC.Types.[] @ GHC.Base.String))) #) } } } } }) -}
+fdc211b04c6e2fe94138792ec0bccaeb
+  getVals2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Which record do you want to edit? (Enter ID #)"#) -}
+ee36550b798601c5ce9fd8ce19e685df
+  getVals3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "What is the new value?"#) -}
+1fa6df67e41bd183d74eec8a04880151
+  lookForFile :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.lookForFile1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+efc447a24a32c08bcb91578c167a967c
+  lookForFile1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Main.lookForFile2
+                        `cast`
+                      (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 Main.getDest1 ipv1 ipv }) -}
+479d246eae99ee3a7c589bff3a79a216
+  lookForFile2 :: GHC.Types.IO GHC.Types.Bool
+  {- Unfolding: (Main.lookForFile3
+                   System.Directory.doesDirectoryExist1
+                     `cast`
+                   (<GHC.IO.Exception.IOError>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))) -}
+3b45966ac0ff6e41d00cc5710a28fde9
+  lookForFile3 ::
+    (GHC.IO.Exception.IOError -> GHC.Types.IO GHC.Types.Bool)
+    -> GHC.Types.IO GHC.Types.Bool
+  {- Unfolding: (System.IO.Error.catchIOError
+                   @ GHC.Types.Bool
+                   Main.lookForFile4
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))) -}
+4c171f34f3e460bbc2adac52e51aa948
+  lookForFile4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 1,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Posix.Files.getFileStatus1
+                        Main.file
+                        s of ds10 { (#,#) ipv ipv1 ->
+                 System.Directory.doesFileExist1 ipv1 ipv }) -}
+2e3417ac847ed584dbdd8cb8142a952f
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+7d472e2dccdc891a6d9fe742bb5319ce
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main2
+                        GHC.Types.False
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Main.lookForFile2
+                        `cast`
+                      (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 Main.getDest1 ipv3 ipv2 } }) -}
+5c606b23958a96ce564d96607e1c7cc9
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "\ESC]0;"#
+                   Main.main3) -}
+248f5fb483c7ee232593820d4c274251
+  main3 :: [GHC.Types.Char]
+  {- Unfolding: (System.Console.ANSI.Codes.setTitleCode_go
+                   Main.main4) -}
+d4c5f3c197926b29f1987a1e33226784
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Banking Transactions"#) -}
+f657fb5e95444810d1d1f6930e7de085
+  main5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+17d79079646af7b7166bd21030cc4931
+  match' ::
+    GHC.Base.Functor f =>
+    [GHC.Types.Char]
+    -> (GHC.Base.String -> f GHC.Base.String)
+    -> Main.Transaction
+    -> f Main.Transaction
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A)><S,U>,
+     Unfolding: (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (x :: [GHC.Types.Char]) ->
+                 case GHC.Base.eqString x Main.match'9 of wild {
+                   GHC.Types.False
+                   -> case GHC.Base.eqString x Main.match'8 of wild1 {
+                        GHC.Types.False
+                        -> case GHC.Base.eqString x Main.match'7 of wild2 {
+                             GHC.Types.False
+                             -> case GHC.Base.eqString x Main.match'6 of wild3 {
+                                  GHC.Types.False
+                                  -> case GHC.Base.eqString x Main.match'5 of wild4 {
+                                       GHC.Types.False
+                                       -> case GHC.Base.eqString x Main.match'4 of wild5 {
+                                            GHC.Types.False
+                                            -> case GHC.Base.eqString x Main.match'3 of wild6 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Base.eqString x Main.match'2 of wild7 {
+                                                      GHC.Types.False -> Main.match'10 @ f
+                                                      GHC.Types.True -> Main.user @ f $dFunctor }
+                                                 GHC.Types.True -> Main.updatedAt @ f $dFunctor }
+                                            GHC.Types.True -> Main.uid @ f $dFunctor }
+                                       GHC.Types.True -> Main.routingNumber @ f $dFunctor }
+                                  GHC.Types.True -> Main.description @ f $dFunctor }
+                             GHC.Types.True -> Main.category @ f $dFunctor }
+                        GHC.Types.True -> Main.amount @ f $dFunctor }
+                   GHC.Types.True -> Main.accountNum @ f $dFunctor }) -}
+9d0c9a858c4736cec5c5925e901c01e9
+  match'1 ::
+    (GHC.Base.String -> Data.Functor.Identity.Identity GHC.Base.String)
+    -> Main.Transaction
+    -> Data.Functor.Identity.Identity Main.Transaction
+  {- Strictness: x -}
+f8164a607595e1db5b40a0242e5dd49c
+  match'10 ::
+    (GHC.Base.String -> f GHC.Base.String)
+    -> Main.Transaction -> f Main.Transaction
+  {- Strictness: x -}
+1486cfaa7f9df65aa0aee9104398eab9
+  match'2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "user"#) -}
+cc9aba8eb281726ff5368f98f46b140a
+  match'3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "updatedAt"#) -}
+2588717f8d2c845c7e055c3c239721a0
+  match'4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "uid"#) -}
+d8682e65298d7a8deacfa108852b49a1
+  match'5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "routingNumber"#) -}
+f759df3723a731eefc1b1455bdaa93e0
+  match'6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "description"#) -}
+a98e7448363ab93d24e857b0d507c848
+  match'7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "category"#) -}
+86d9f0f67dfd01fd9ec9c48ae25d1d69
+  match'8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "amount"#) -}
+641677cd708700e5edd8c64c984733f6
+  match'9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "accountNum"#) -}
+a8f06ac46559ae6f84f7980ddba8bed1
+  mergeData' ::
+    (Main.Transaction -> Main.Transaction)
+    -> GHC.Base.String -> [Main.Transaction] -> GHC.Types.IO ()
+  {- Arity: 4,
+     Strictness: <L,C(U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U))><L,A><S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.mergeData'1
+                  `cast`
+                (<Main.Transaction -> Main.Transaction>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R <[Main.Transaction]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+bfeb031b12efc5660712e570940eb472
+  mergeData'1 ::
+    (Main.Transaction -> Main.Transaction)
+    -> GHC.Base.String
+    -> [Main.Transaction]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,C(U(1*U,1*U,1*U,1*U,1*U,1*U,1*U,1*U))><L,A><S,1*U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ (w :: Main.Transaction -> Main.Transaction)
+                   (w1 :: GHC.Base.String)
+                   (w2 :: [Main.Transaction])
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Main.$wmergeData' w w2 w3) -}
+d85891c233ef845377a4edf5615a0c14
+  names :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names24
+                   Main.names1) -}
+2a4a0773d5baef17076bb2f94a9a58b2
+  names1 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names22
+                   Main.names2) -}
+6cf703d5182b5603fe66b37cd79fdeb7
+  names10 :: [GHC.Types.Char] -> [[GHC.Types.Char]]
+  {- Unfolding: (Data.List.Split.Internals.splitOn
+                   @ GHC.Types.Char
+                   GHC.Classes.$fEqChar
+                   Main.names11) -}
+81789142a1412ae1b82a53e5f4667a7b
+  names11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_"#) -}
+513b11b316775a538f3944c2b84a4340
+  names12 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names13)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+a25ccbf21679f96f34df37b979069d4f
+  names13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_amount"#) -}
+3f632ad8b46ce0e615bfbb7a66b4692d
+  names14 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names15)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+e87ca87aba75369f5c36683f95ee0a64
+  names15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_description"#) -}
+a63ed23e3af01440b284dce7d82f6ba6
+  names16 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names17)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+3e2d504cd2539fa7bddecfb0c7228b2d
+  names17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_category"#) -}
+31cd864777f9d155419dc404440537ef
+  names18 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names19)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+9f0e724ffe5e6981a17a45d0a8dd33b4
+  names19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_routingNumber"#) -}
+76b3bc7f7064da194acac9e8f2d12ecc
+  names2 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names20
+                   Main.names3) -}
+9288d97c3910f64424ba2a406911a308
+  names20 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names21)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+c00045afcce9a7350ee8a7f05bf665b1
+  names21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_accountNum"#) -}
+4d7854699c2b319237b3356a2722d955
+  names22 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names23)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+17c63abe57938f28f2999303f441e2c3
+  names23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_user"#) -}
+b0b5264a7dd3841b2922c34082690e8c
+  names24 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names25)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+be945458623c993e8e536014d26951aa
+  names25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_uid"#) -}
+5dc4faa0a9992bf67e0322ccea2d07a0
+  names3 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names18
+                   Main.names4) -}
+a94d22b0b66cdabe837f58b9e36ae5d7
+  names4 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names16
+                   Main.names5) -}
+439f081422d9acaa72bb30914590db21
+  names5 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names14
+                   Main.names6) -}
+f7008f363102b2879e99bfe603a15ccf
+  names6 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names12
+                   Main.names7) -}
+b4e348e5079584436c25de34d3b3645d
+  names7 :: [[GHC.Types.Char]]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ [GHC.Types.Char]
+                   Main.names8
+                   (GHC.Types.[] @ [GHC.Types.Char])) -}
+c593f7fcafcd3784a448ff744f8f1a46
+  names8 :: [GHC.Types.Char]
+  {- Unfolding: (Main.names_go
+                   (Main.names10 Main.names9)
+                   (GHC.List.lastError @ [GHC.Types.Char])) -}
+deb29bb12a50979d8840ea85695cb4ed
+  names9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "_updatedAt"#) -}
+b4f9e4855262d799cf2c9001a9b5be59
+  names_go ::
+    [[GHC.Types.Char]] -> [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+b17984842734ec2a7cee8880fedece9a
+  nextMove :: [GHC.Types.Char] -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.nextMove1
+                  `cast`
+                (<[GHC.Types.Char]>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+8d64161e72be5582cc07e14d3d6a1b13
+  nextMove1 ::
+    [GHC.Types.Char]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,U><S,U> -}
+65feec58b1434bedb5954600a7fb42b9
+  routeEditTransaction ::
+    [Main.Transaction]
+    -> Main.Transaction -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 4, Strictness: <L,1*U><L,1*U(U,U,U,U,U,U,U,U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.editTransaction2
+                  `cast`
+                (<[Main.Transaction]>_R
+                 ->_R <Main.Transaction>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+d6dd992607e4fc35ab8e30083a543b2f
+  routingNumber ::
+    Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction x1 x2 x3 y1 x5 x6 x7 x8)
+                   (f1 x4) }) -}
+e9fe31ee0152307c85936d75ba4ddc21
+  sec :: (t, t1) -> t1
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ t @ t1 (ds :: (t, t1)) -> case ds of wild { (,) x y -> y }) -}
+507e777d97b95a8f0ac72947dd3061fa
+  uid :: Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction y1 x2 x3 x4 x5 x6 x7 x8)
+                   (f1 x1) }) -}
+6e982c75dd38d7da5b742eff1ba68514
+  update ::
+    [GHC.Types.Char]
+    -> GHC.Base.String -> Main.Transaction -> Main.Transaction
+  {- Arity: 3, Strictness: <S,U><L,U><S,1*U(U,U,U,U,U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: [GHC.Types.Char])
+                   (w1 :: GHC.Base.String)
+                   (w2 :: Main.Transaction) ->
+                 case w2 of ww { Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 case GHC.Base.eqString w Main.match'9 of wild {
+                   GHC.Types.False
+                   -> case GHC.Base.eqString w Main.match'8 of wild1 {
+                        GHC.Types.False
+                        -> case GHC.Base.eqString w Main.match'7 of wild2 {
+                             GHC.Types.False
+                             -> case GHC.Base.eqString w Main.match'6 of wild3 {
+                                  GHC.Types.False
+                                  -> case GHC.Base.eqString w Main.match'5 of wild4 {
+                                       GHC.Types.False
+                                       -> case GHC.Base.eqString w Main.match'4 of wild5 {
+                                            GHC.Types.False
+                                            -> case GHC.Base.eqString w Main.match'3 of wild6 {
+                                                 GHC.Types.False
+                                                 -> case GHC.Base.eqString w Main.match'2 of wild7 {
+                                                      GHC.Types.False
+                                                      -> case Main.match'1
+                                                         ret_ty Main.Transaction
+                                                         of {}
+                                                      GHC.Types.True
+                                                      -> Main.Transaction
+                                                           ww1
+                                                           w1
+                                                           ww3
+                                                           ww4
+                                                           ww5
+                                                           ww6
+                                                           ww7
+                                                           ww8 }
+                                                 GHC.Types.True
+                                                 -> Main.Transaction
+                                                      ww1
+                                                      ww2
+                                                      ww3
+                                                      ww4
+                                                      ww5
+                                                      ww6
+                                                      ww7
+                                                      w1 }
+                                            GHC.Types.True
+                                            -> Main.Transaction w1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 }
+                                       GHC.Types.True
+                                       -> Main.Transaction ww1 ww2 ww3 w1 ww5 ww6 ww7 ww8 }
+                                  GHC.Types.True
+                                  -> Main.Transaction ww1 ww2 ww3 ww4 ww5 w1 ww7 ww8 }
+                             GHC.Types.True -> Main.Transaction ww1 ww2 ww3 ww4 w1 ww6 ww7 ww8 }
+                        GHC.Types.True -> Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 w1 ww8 }
+                   GHC.Types.True
+                   -> Main.Transaction ww1 ww2 w1 ww4 ww5 ww6 ww7 ww8 } }) -}
+eadb4e92769d63a7441ee9b6479a6a0f
+  updateFile :: GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.updateFile1
+                  `cast`
+                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+5d651389b381e1dad68c138a504e5449
+  updateFile1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (s :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.IO.appendFile1
+                        Main.file
+                        s
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 Main.delete2 ipv }) -}
+b47c1389746e99a001ade2d9d2f8fd78
+  updatedAt ::
+    Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction x1 x2 x3 x4 x5 x6 x7 y1)
+                   (f1 x8) }) -}
+b41a52895c3867879dd157b11e421ed5
+  user :: Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*C1(U)><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (3, False, False)
+                (\ @ (f :: * -> *)
+                   ($dFunctor :: GHC.Base.Functor f)
+                   (f1 :: GHC.Base.String -> f GHC.Base.String)
+                   (ds :: Main.Transaction) ->
+                 case ds of wild { Main.Transaction x1 x2 x3 x4 x5 x6 x7 x8 ->
+                 GHC.Base.fmap
+                   @ f
+                   $dFunctor
+                   @ GHC.Base.String
+                   @ Main.Transaction
+                   (\ (y1 :: GHC.Base.String) ->
+                    Main.Transaction x1 y1 x3 x4 x5 x6 x7 x8)
+                   (f1 x2) }) -}
+7f76196d11a6a14c985651b7375793c6
+  write :: GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.write1
+                  `cast`
+                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+cfaef18da10767dbf54aa67d1a76d1b4
+  write1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (s :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.IO.writeFile1
+                        Main.file
+                        s
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case System.IO.writeFile1
+                        Main.file
+                        Main.delete4
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Main.colorPutStr1
+                        Main.write2
+                        System.Console.ANSI.Types.Green
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case Main.colorPutStr1
+                        Main.delete3
+                        System.Console.ANSI.Types.Green
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 System.Console.ANSI.Unix.clearScreen1 ipv6 } } } }) -}
+91a121bc4bfbf323411964934747e74c
+  write2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "CREATED FILE."#) -}
+instance GHC.Classes.Eq [Main.Transaction] = Main.$fEqTransaction
+instance GHC.Classes.Ord [Main.Transaction] = Main.$fOrdTransaction
+instance GHC.Read.Read [Main.Transaction] = Main.$fReadTransaction
+instance GHC.Show.Show [Main.Transaction] = Main.$fShowTransaction
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,321 @@
+
+==================== FINAL INTERFACE ====================
+2017-10-02 01:02:18.121829 UTC
+
+interface transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF:Lib 8002
+  interface hash: 2754802d54e7102ef7da453990fea941
+  ABI hash: 00daf2e4af599d8ee98168c920f76d7e
+  export-list hash: 1d2f216ec43c471b27e6b81418537d66
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 76adf31fae06a88e0bf510b5d268b7c5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.fieldNames
+  Lib.listFields
+module dependencies:
+package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      call-stack-0.1.0@call-stack-0.1.0-FYVrCPXGP9EGAuTW32963O
+                      comonad-5.0.2@comonad-5.0.2-Fq9Xy9jdx6uIyJZn00E6Yc
+                      containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-29zF0Im431177ovfbHYCGv
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      distributive-0.5.3@distributive-0.5.3-IX4kyVcHAyoH4uFYrsjY1R
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      free-4.12.4@free-4.12.4-C2gBQV0m8J42HxqSLTFyVx
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      integer-gmp-1.0.0.1
+                      kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX
+                      lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-BhL9U5k7NtGJn1itwIHt2Y
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT
+                      reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4
+                      semigroupoids-5.2.1@semigroupoids-5.2.1-Db8txM8kTsI6Y49CY6g5Jn
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-IuFogs8HAVUJBWVNMhtssu
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         reflection-2.1.2@reflection-2.1.2-Bem12O1xFGSHr4C2Hyu1c4:Data.Reflection
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+family instance modules: adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp:Data.Functor.Rep
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Biff
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Clown
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Fix
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Flip
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Join
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Joker
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Product
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Sum
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Tannen
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Wrapped
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Day
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Yoneda
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.At
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Internal.Indexed
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Reified
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Tuple
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Wrapped
+                         lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Zoom
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT:Data.Profunctor.Rep
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ:Language.Haskell.TH.Datatype
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens 51c282815697462fb4c0814abcb89573
+import  -/  template-haskell-2.11.1.0:Language.Haskell.TH d856a1f9d606be57026da48a46c8b0a9
+import  -/  template-haskell-2.11.1.0:Language.Haskell.TH.Lib 715cf040319ba19bc69da4853519bde7
+import  -/  template-haskell-2.11.1.0:Language.Haskell.TH.Syntax f73a6f51a55e744c097972689232ddf4
+9cee2b1b74df30bd253e0d99a02d2987
+  $slift3 ::
+    [GHC.Types.Char]
+    -> Language.Haskell.TH.Syntax.Q Language.Haskell.TH.Syntax.Exp
+  {- Arity: 1,
+     Unfolding: (Language.Haskell.TH.Syntax.$fLift[]_$clift
+                   @ GHC.Types.Char
+                   Language.Haskell.TH.Syntax.$fLiftChar1
+                     `cast`
+                   (Trans
+                        (<GHC.Types.Char>_R
+                         ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                                       <Language.Haskell.TH.Syntax.Exp>_N))
+                        (Sym (Language.Haskell.TH.Syntax.N:Lift[0]
+                                  <GHC.Types.Char>_N)))) -}
+0e7ab00702a3b1790d0e2283d5ae7e8d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
+d13082c4eeb0af67341df36ffc89ea92
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Lib"#) -}
+88c68cbf1a86a905741a392d33e3a8a1
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF"#) -}
+f6291993af45e5d569548340dc78cdee
+  fieldNames ::
+    Language.Haskell.TH.Syntax.Name -> Language.Haskell.TH.Lib.ExpQ
+  {- Arity: 2,
+     Strictness: <L,U><S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(U,U,U,U,U),U,U,U,U),U),U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.fieldNames1
+                  `cast`
+                (<Language.Haskell.TH.Syntax.Name>_R
+                 ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                               <Language.Haskell.TH.Syntax.Exp>_N)) -}
+44aa19cbca625f81693306abd0fcec34
+  fieldNames1 ::
+    Language.Haskell.TH.Syntax.Name
+    -> forall (m :: * -> *).
+       Language.Haskell.TH.Syntax.Quasi m =>
+       m Language.Haskell.TH.Syntax.Exp
+  {- Arity: 2,
+     Strictness: <L,U><S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(U,U,U,U,U),U,U,U,U),U),U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: (\ (t :: Language.Haskell.TH.Syntax.Name)
+                   @ (m :: * -> *)
+                   (eta :: Language.Haskell.TH.Syntax.Quasi m) ->
+                 let {
+                   lvl1 :: m Language.Haskell.TH.Syntax.Exp
+                   = Language.Haskell.TH.Syntax.$fMonadQ1
+                       @ Language.Haskell.TH.Syntax.Exp
+                       Lib.fieldNames2
+                       @ m
+                       eta
+                 } in
+                 let {
+                   lvl2 :: Language.Haskell.TH.Syntax.Exp
+                           -> m Language.Haskell.TH.Syntax.Exp
+                     {- Arity: 1 -}
+                   = \ (x :: Language.Haskell.TH.Syntax.Exp) ->
+                     Language.Haskell.TH.Syntax.returnQ1
+                       @ Language.Haskell.TH.Syntax.Exp
+                       x
+                       @ m
+                       eta
+                 } in
+                 let {
+                   lvl3 :: Control.Monad.Fail.MonadFail m
+                   = Language.Haskell.TH.Syntax.$p1Quasi @ m eta
+                 } in
+                 let {
+                   lvl4 :: GHC.Base.Monad m = Control.Monad.Fail.$p1MonadFail @ m lvl3
+                 } in
+                 GHC.Base.>>=
+                   @ m
+                   lvl4
+                   @ Language.Haskell.TH.Syntax.Info
+                   @ Language.Haskell.TH.Syntax.Exp
+                   (Language.Haskell.TH.Syntax.qReify @ m eta t)
+                   (\ (x :: Language.Haskell.TH.Syntax.Info) ->
+                    case x of wild {
+                      DEFAULT -> lvl1
+                      Language.Haskell.TH.Syntax.TyConI ds
+                      -> case ds of wild1 {
+                           DEFAULT -> lvl1
+                           Language.Haskell.TH.Syntax.DataD ds1 ds2 ds3 ds4 constructors ds5
+                           -> GHC.Base.>>=
+                                @ m
+                                lvl4
+                                @ Language.Haskell.TH.Syntax.Exp
+                                @ Language.Haskell.TH.Syntax.Exp
+                                ((Language.Haskell.TH.Syntax.$fLift[]_$clift
+                                    @ [GHC.Types.Char]
+                                    Lib.$slift3
+                                      `cast`
+                                    (Sym (Language.Haskell.TH.Syntax.N:Lift[0]
+                                              <[GHC.Types.Char]>_N))
+                                    (Data.OldList.nubBy
+                                       @ GHC.Base.String
+                                       GHC.Base.eqString
+                                       (Lib.fieldNames_go constructors)))
+                                   `cast`
+                                 (Language.Haskell.TH.Syntax.N:Q[0]
+                                      <Language.Haskell.TH.Syntax.Exp>_N)
+                                   @ m
+                                   eta)
+                                lvl2 } })) -}
+ef5a10e231a286419cf9f69a5c109466
+  fieldNames2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Pattern match failure in do expression at src/Lib.hs:23:5-41"#) -}
+2e80e296f9c1f73cb85607f23c8ed2c9
+  fieldNames_go ::
+    [Language.Haskell.TH.Syntax.Con] -> [GHC.Base.String]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+6b7726a7e125aa4372a64694a78cc34a
+  listFields ::
+    Language.Haskell.TH.Syntax.Name
+    -> Language.Haskell.TH.Syntax.Q [GHC.Base.String]
+  {- Arity: 2,
+     Strictness: <L,U><S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(U,U,U,U,U),U,U,U,U),U),U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Lib.listFields1
+                  `cast`
+                (<Language.Haskell.TH.Syntax.Name>_R
+                 ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
+                               <[GHC.Base.String]>_N)) -}
+c21bce676b7946aafe8f11c3e9346282
+  listFields1 ::
+    Language.Haskell.TH.Syntax.Name
+    -> forall (m :: * -> *).
+       Language.Haskell.TH.Syntax.Quasi m =>
+       m [GHC.Base.String]
+  {- Arity: 2,
+     Strictness: <L,U><S(S(S(LC(C(S))LLL)L)LLLLLLLLLLLLLLLLLLLL),U(U(U(U(U,U,U,U,U),U,U,U,U),U),U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: (\ (name :: Language.Haskell.TH.Syntax.Name)
+                   @ (m :: * -> *)
+                   (eta :: Language.Haskell.TH.Syntax.Quasi m) ->
+                 let {
+                   lvl1 :: m [GHC.Base.String]
+                   = Language.Haskell.TH.Syntax.$fMonadQ1
+                       @ [GHC.Base.String]
+                       Lib.listFields2
+                       @ m
+                       eta
+                 } in
+                 let {
+                   lvl2 :: Control.Monad.Fail.MonadFail m
+                   = Language.Haskell.TH.Syntax.$p1Quasi @ m eta
+                 } in
+                 let {
+                   lvl3 :: GHC.Base.Monad m = Control.Monad.Fail.$p1MonadFail @ m lvl2
+                 } in
+                 let {
+                   lvl4 :: GHC.Base.Applicative m = GHC.Base.$p1Monad @ m lvl3
+                 } in
+                 GHC.Base.>>=
+                   @ m
+                   (Control.Monad.Fail.$p1MonadFail
+                      @ m
+                      (Language.Haskell.TH.Syntax.$p1Quasi @ m eta))
+                   @ Language.Haskell.TH.Syntax.Info
+                   @ [GHC.Base.String]
+                   (Language.Haskell.TH.Syntax.qReify @ m eta name)
+                   (\ (x :: Language.Haskell.TH.Syntax.Info) ->
+                    case x of wild {
+                      DEFAULT -> lvl1
+                      Language.Haskell.TH.Syntax.TyConI ds
+                      -> case ds of wild1 {
+                           DEFAULT -> lvl1
+                           Language.Haskell.TH.Syntax.DataD ds1 ds2 ds3 ds4 cons ds5
+                           -> GHC.Base.pure
+                                @ m
+                                lvl4
+                                @ [GHC.Base.String]
+                                (Lib.listFields_go cons) } })) -}
+7cfe3a3ba79ee24f66cb44645169f846
+  listFields2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Pattern match failure in do expression at src/Lib.hs:16:3-31"#) -}
+078216a9edcf16e1d993a3829697aa20
+  listFields_go ::
+    [Language.Haskell.TH.Syntax.Con] -> [GHC.Base.String]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
