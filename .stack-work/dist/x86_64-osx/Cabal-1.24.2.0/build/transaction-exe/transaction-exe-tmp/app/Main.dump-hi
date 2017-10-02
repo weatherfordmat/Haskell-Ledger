@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-10-02 01:02:19.958884 UTC
+2017-10-02 01:34:16.043996 UTC
 
 interface main@main:Main 8002
-  interface hash: 2b560919aaec9528b0b337b34432d886
-  ABI hash: 2bcfc3b3920e0e701076e5f8a7c3a02a
+  interface hash: 0b7ab0bca7a956ab1adbc1ffad73ddaf
+  ABI hash: d7bb5bfb0ba96d8c71b5a9ad92bdfb1d
   export-list hash: b649f3dd2da567c8f1eb927bf2b8fdac
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f58b9bf178893249de22598ef7aef233
@@ -1352,29 +1352,49 @@ fcb988c90f514b0cd1c76c89bda97c74
                           go3 ys ipv } }
                  } in
                  go3 eta eta1) -}
-e63775ad882bdc4e6cbc4d9d0da73239
+fbbcc2cdd2989311d50adab2e381c932
   clearFile :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.clearFile1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-692dcc8a76117ab6dcfb495018713544
+dfeb433053a22094780751a625ad0175
   clearFile1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U> -}
-f646c45e94ebd788bb2b84cd6b0160bb
-  clearingFile :: [GHC.Types.Char] -> GHC.Types.IO ()
-  {- Arity: 2, Strictness: <S,1*U><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.clearingFile1
-                  `cast`
-                (<[GHC.Types.Char]>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-37ee88f04889862a54056b39b9eff722
-  clearingFile1 ::
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.clearFile3
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 Main.clearFile2 ipv3 ipv2 } }) -}
+bc5fc4c75b913778e0af93cdc41ec4aa
+  clearFile2 ::
     [GHC.Types.Char]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
+f26f0a7fee05146e7e9d7a273e28ab73
+  clearFile3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Are you sure you want to delete your transactions? (Y|N)"#) -}
+0126946560e24af208530ac8014cda67
+  clearingFile :: [GHC.Types.Char] -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.clearFile2
+                  `cast`
+                (<[GHC.Types.Char]>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
 e8f751b7d3e0fff20ca9abccecaa5865
   colorPutStr ::
     GHC.Base.String
@@ -1927,7 +1947,7 @@ f657fb5e95444810d1d1f6930e7de085
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
-17d79079646af7b7166bd21030cc4931
+dc7c74b97f67364607145207556cad1f
   match' ::
     GHC.Base.Functor f =>
     [GHC.Types.Char]

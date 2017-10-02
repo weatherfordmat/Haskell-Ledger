@@ -31,6 +31,7 @@ data Transaction = Transaction{
 } deriving (Read, Show, Eq, Ord) 
 makeLenses ''Transaction
 
+match' :: Functor f => [Char] -> (String -> f String) -> Transaction -> f Transaction
 match' x = case x of
     "uid" -> uid
     "user" -> user
@@ -201,6 +202,7 @@ routeEditTransaction xs t idT = do
     let r = update n val t
     delete idT xs
     updateFile $ show r
+    getDest True
 
 editTransaction :: IO()
 editTransaction = do
