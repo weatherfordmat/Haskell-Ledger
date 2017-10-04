@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-10-02 01:34:16.043996 UTC
+2017-10-02 15:34:51.189969 UTC
 
 interface main@main:Main 8002
-  interface hash: 0b7ab0bca7a956ab1adbc1ffad73ddaf
-  ABI hash: d7bb5bfb0ba96d8c71b5a9ad92bdfb1d
-  export-list hash: b649f3dd2da567c8f1eb927bf2b8fdac
+  interface hash: 592cc8f7ff4b3825f9b8ab9a76ef4926
+  ABI hash: 073d8f562d9d7590ad68921e9521cdd9
+  export-list hash: d80aa45c7448b0882bee6ad2fed80ad3
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f58b9bf178893249de22598ef7aef233
   sig of: Nothing
@@ -16,6 +16,7 @@ exports:
   Main.amount
   Main.category
   Main.change'
+  Main.clearConsole
   Main.clearFile
   Main.clearingFile
   Main.colorPutStr
@@ -1352,6 +1353,61 @@ fcb988c90f514b0cd1c76c89bda97c74
                           go3 ys ipv } }
                  } in
                  go3 eta eta1) -}
+7f505376fc71d333c92d76eebce014df
+  clearConsole :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.clearConsole1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+de05019ca6b29543277a85752c182679
+  clearConsole1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        System.Console.ANSI.Codes.clearScreenCode
+                        GHC.Types.False
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 Main.clearConsole2 ipv }) -}
+a0d1080713275dd14566244c6211bdb7
+  clearConsole2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.clearConsole3
+                   GHC.Types.False
+                   eta) -}
+9718a41c02228026b6127e9787e93dca
+  clearConsole3 :: GHC.Base.String
+  {- Unfolding: (System.Console.ANSI.Codes.csi
+                   Main.clearConsole4
+                   System.Console.ANSI.Codes.setCursorPositionCode1) -}
+10510d8f9b9d3576a30fa598cbad6228
+  clearConsole4 :: [GHC.Types.Int]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.clearConsole7
+                   Main.clearConsole5) -}
+400fbb90d53be00c357e9a72ad7b4086
+  clearConsole5 :: [GHC.Types.Int]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Main.clearConsole6
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+d65e30b0c0dbb6e0da74ff49c58b651b
+  clearConsole6 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
+79745369254157542c9993775637efdd
+  clearConsole7 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2#) -}
 fbbcc2cdd2989311d50adab2e381c932
   clearFile :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
@@ -1467,7 +1523,7 @@ f21ed7c065ca49e0386cec872054f01f
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U> -}
-0b7a03b2c6a9103744b49b8c51fed227
+4fef7078b244e80f78d89dd47ee2cc37
   delete :: GHC.Base.String -> [Main.Transaction] -> GHC.Types.IO ()
   {- Arity: 3, Strictness: <L,U><L,1*U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -1476,7 +1532,7 @@ f21ed7c065ca49e0386cec872054f01f
                 (<GHC.Base.String>_R
                  ->_R <[Main.Transaction]>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-c0952d01381d3d90424764b67fc41e6f
+9f558fabf629eab1f5235450704c50c3
   delete1 ::
     GHC.Base.String
     -> [Main.Transaction]
@@ -1517,25 +1573,31 @@ c0952d01381d3d90424764b67fc41e6f
                                          ds9
                                          (GHC.Types.[] @ GHC.Types.Char))
                                       eta1 of ds10 { (#,#) ipv2 ipv3 ->
-                               case Main.delete2 ipv2 of ds11 { (#,#) ipv4 ipv5 -> go3 ys ipv4 } }
+                               case System.IO.appendFile1
+                                      Main.file
+                                      Main.delete4
+                                      ipv2 of ds11 { (#,#) ipv4 ipv5 ->
+                               case Main.delete2 ipv4 of ds12 { (#,#) ipv6 ipv7 ->
+                               go3 ys ipv6 } } }
                             GHC.Types.True -> go3 ys eta1 } } }
                  } in
                  go3 y ipv }) -}
-879887c955b86bd2cb64e983a41b3e34
+a5fee150dbff11b1b6fe91a12745d63a
   delete2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case System.IO.appendFile1
-                        Main.file
-                        Main.delete4
-                        s of ds1 { (#,#) ipv ipv1 ->
                  case Main.colorPutStr1
                         Main.delete3
                         System.Console.ANSI.Types.Green
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        System.Console.ANSI.Codes.clearScreenCode
+                        GHC.Types.False
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 System.Console.ANSI.Unix.clearScreen1 ipv2 } }) -}
+                 Main.clearConsole2 ipv2 } }) -}
 c4c7d67ab76598d0c7e8b09fed7e505b
   delete3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
@@ -1543,12 +1605,12 @@ c4c7d67ab76598d0c7e8b09fed7e505b
 be763105470ffe3897184514a757983c
   delete4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "\n"#) -}
-74b2a146e276842d0cfb52f663166e9c
+86a3fa5cff78169a5fe6576a654e7a95
   deleteLine :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.deleteLine1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-53af4cc08f8d59c6dfe3800e01aba8ea
+eef5e4cd0e89df105736bda03105fc65
   deleteLine1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2308,14 +2370,14 @@ e9fe31ee0152307c85936d75ba4ddc21
                         GHC.Types.True -> Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 w1 ww8 }
                    GHC.Types.True
                    -> Main.Transaction ww1 ww2 w1 ww4 ww5 ww6 ww7 ww8 } }) -}
-eadb4e92769d63a7441ee9b6479a6a0f
+004950eab6c81854352d70619e576ad1
   updateFile :: GHC.Base.String -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.updateFile1
                   `cast`
                 (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5d651389b381e1dad68c138a504e5449
+c67828be96ac9d4212ad4f8aef42e25d
   updateFile1 ::
     GHC.Base.String
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2328,7 +2390,11 @@ eadb4e92769d63a7441ee9b6479a6a0f
                         Main.file
                         s
                         eta of ds1 { (#,#) ipv ipv1 ->
-                 Main.delete2 ipv }) -}
+                 case System.IO.appendFile1
+                        Main.file
+                        Main.delete4
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 Main.delete2 ipv2 } }) -}
 b47c1389746e99a001ade2d9d2f8fd78
   updatedAt ::
     Control.Lens.Type.Lens' Main.Transaction GHC.Base.String
@@ -2368,14 +2434,14 @@ b41a52895c3867879dd157b11e421ed5
                    (\ (y1 :: GHC.Base.String) ->
                     Main.Transaction x1 y1 x3 x4 x5 x6 x7 x8)
                    (f1 x2) }) -}
-7f76196d11a6a14c985651b7375793c6
+74547e1e34ba07663c35ac3731fa7996
   write :: GHC.Base.String -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.write1
                   `cast`
                 (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-cfaef18da10767dbf54aa67d1a76d1b4
+1bfbeb697207c33a0e791186b24695fd
   write1 ::
     GHC.Base.String
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2399,7 +2465,12 @@ cfaef18da10767dbf54aa67d1a76d1b4
                         Main.delete3
                         System.Console.ANSI.Types.Green
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
-                 System.Console.ANSI.Unix.clearScreen1 ipv6 } } } }) -}
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        System.Console.ANSI.Codes.clearScreenCode
+                        GHC.Types.False
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 Main.clearConsole2 ipv8 } } } } }) -}
 91a121bc4bfbf323411964934747e74c
   write2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "CREATED FILE."#) -}

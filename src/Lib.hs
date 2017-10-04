@@ -30,3 +30,4 @@ fieldNames t = do
         names (ForallC _ _ con) = names con
         names _ = []
         fst3 (x,_,_) = x
+

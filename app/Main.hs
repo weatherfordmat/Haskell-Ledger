@@ -15,8 +15,12 @@ import Data.UnixTime
 import Data.Char
 import Data.Bits
 import Data.List.Split
+import Data.List (sortBy)
+import Data.Maybe
+import System.Console.Terminal.Size
 
 file = "./transactions.txt"
+headers = [(_uid, "ID"), (_amount, "AMOUNT ($)"), (_user, "USER"), (_routingNumber, "RTNG #"), (_accountNum, "ACCT #"), (_updatedAt, "UPDATED AT"), (_description, "DESC")]
 
 -- Basic Bank Transaction
 data Transaction = Transaction{
@@ -49,16 +53,33 @@ update field val t = ((match' field) .~ val) t
 sec :: (t, t1) -> t1
 sec (x,y) = y
 
+cols :: (Foldable t, Ord (t a)) => (Transaction -> t a) -> [Char] -> Color -> IO ()
+cols n o c = do
+    contents <- readFile file
+    xs <- mapM (\x -> do
+        let transaction = (read x :: Transaction)
+        return transaction
+        ) (lines contents)
+    let result = map(\x -> n x) xs
+    let s = length $ maximum $ result
+    let st = s - (length o) + 5
+    let output = "| " ++ o ++ (replicate st ' ')
+    colorPutPartial output c
+
 formatHeaders :: IO ()
 formatHeaders = do
-    let str = id ("ID | Amount ($) | User | Routing # | Category | Description | Account # | Updated At ")
-    colorPutStr str Red
+    mapM_ (\x -> cols (fst x) (sec x) Red) headers
+    putStrLn ""
+
+colorTrans :: Transaction -> Color -> IO ()
+colorTrans t c = do
+    mapM_ (\x -> cols (fst x) ((fst x) t) c) headers
+    putStrLn ""
 
 formatTransactionOutput :: Transaction -> IO ()
-formatTransactionOutput t
-    | (read (_amount t)::Float) < 0 = putStrLn str
-    | otherwise = colorPutStr str Green
-    where str = id (_uid t ++ " | " ++ _amount t ++ " | " ++ _user t  ++ " | " ++ _routingNumber t++" | "++ _category t ++" | " ++_description t ++" | " ++ _accountNum t ++" | " ++ _updatedAt t)
+formatTransactionOutput t 
+    | (read (_amount t)::Float) < 0 = colorTrans t Black
+    | otherwise = colorTrans t Green
 
 change' :: (Transaction -> Transaction) -> String -> [Transaction] -> IO ()
 change' l uidValue = mergeData' ((uid .~ uidValue) . l) uidValue
@@ -76,6 +97,12 @@ getVals = do
     let updatedAt = show $ utSeconds time
     return [val, uid, updatedAt]
 
+colorPutPartial :: String -> Color -> IO ()
+colorPutPartial x color = do
+    setSGR [SetColor Foreground Vivid color]
+    putStr x
+    setSGR [Reset]
+
 colorPutStr :: String -> Color -> IO ()
 colorPutStr x color = do
     setSGR [SetColor Foreground Vivid color]
@@ -87,19 +114,25 @@ lookForFile = do
     x <- doesFileExist file
     getDest x
 
+getWidth :: IO ()
+getWidth = do
+    result <- size
+    let val = width $ fromJust result
+    format val "-"
+
 getDest :: Bool -> IO ()
 getDest x 
     | x == False = continue
     | otherwise = do
         f <- readFile file
         putStrLn ""
-        colorPutStr "READING FILE" Blue
-        format 250 "-"
+        getWidth
         formatHeaders
         mapM (\x -> do
             let transaction = (read x :: Transaction)
             formatTransactionOutput transaction
             ) (lines f)
+        getWidth
         let uid = (length $ lines f) + 1
         continue
 
@@ -119,8 +152,10 @@ nextMove c
         | c == "C" = clearFile
         | c == "I" = getIncome
         | c == "E" = editTransaction
+        | c == "Q" = colorPutStr "CLOSING APPLICATION." Red
         | otherwise = do
-            colorPutStr "END OF SESSION." Red
+            colorPutStr ("COMMAND " ++ c ++ " NOT RECOGNIZED.") Red
+            continue
 
 getTransaction :: IO ()
 getTransaction = do
@@ -145,20 +180,26 @@ getTransaction = do
     updateFile (show transfer)
     getDest True
 
+
+clearConsole :: IO ()
+clearConsole = do
+    clearScreen
+    setCursorPosition 1 0
+
 write :: String -> IO ()
 write s = do
     writeFile file s
     writeFile file "\n"
     colorPutStr "CREATED FILE." Green
     colorPutStr "RECORDED TRANSACTION." Green
-    clearScreen
+    clearConsole
 
 updateFile :: String -> IO ()
 updateFile s = do
     appendFile file s
     appendFile file "\n"
     colorPutStr "RECORDED TRANSACTION." Green
-    clearScreen
+    clearConsole
 
 clearFile :: IO ()
 clearFile = do
@@ -259,6 +300,5 @@ names = do
 
 main :: IO ()
 main = do
-    let x = names
     setTitle "Banking Transactions"
     lookForFile
