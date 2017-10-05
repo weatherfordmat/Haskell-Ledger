@@ -42,7 +42,7 @@ cols n o = do
     let s = length $ maximum $ result
     let st = s - length o
     let output = "| " ++ o ++ (replicate st ' ') ++ "|"
-    putStrLn output
+    print output
 
 format :: Int -> String -> IO ()
 format n s = do

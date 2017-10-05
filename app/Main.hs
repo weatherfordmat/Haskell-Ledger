@@ -15,7 +15,7 @@ import Data.UnixTime
 import Data.Char
 import Data.Bits
 import Data.List.Split
-import Data.List (sortBy)
+import Data.List (sort, sortBy)
 import Data.Maybe
 import System.Console.Terminal.Size
 
@@ -53,13 +53,18 @@ update field val t = ((match' field) .~ val) t
 sec :: (t, t1) -> t1
 sec (x,y) = y
 
-cols :: (Foldable t, Ord (t a)) => (Transaction -> t a) -> [Char] -> Color -> IO ()
-cols n o c = do
+getTransactionRecords :: IO [Transaction]
+getTransactionRecords = do
     contents <- readFile file
     xs <- mapM (\x -> do
         let transaction = (read x :: Transaction)
         return transaction
         ) (lines contents)
+    return xs
+
+cols :: (Foldable t, Ord (t a)) => (Transaction -> t a) -> [Char] -> Color -> IO ()
+cols n o c = do
+    xs <- getTransactionRecords
     let result = map(\x -> n x) xs
     let s = length $ maximum $ result
     let st = s - (length o) + 5
@@ -128,10 +133,8 @@ getDest x
         putStrLn ""
         getWidth
         formatHeaders
-        mapM (\x -> do
-            let transaction = (read x :: Transaction)
-            formatTransactionOutput transaction
-            ) (lines f)
+        z <- sortIt
+        mapM_ (formatTransactionOutput) (z)
         getWidth
         let uid = (length $ lines f) + 1
         continue
@@ -146,19 +149,19 @@ continue = do
 
 nextMove :: [Char] -> IO ()
 nextMove c
-        | c == "A" = getTransaction
-        | c == "D" = deleteLine
-        | c == "S" = getSum
-        | c == "C" = clearFile
-        | c == "I" = getIncome
-        | c == "E" = editTransaction
-        | c == "Q" = colorPutStr "CLOSING APPLICATION." Red
+        | c == "\\a" = addTransaction
+        | c == "\\d" = deleteLine
+        | c == "\\s" = getSum
+        | c == "\\c" = clearFile
+        | c == "\\i" = getIncome
+        | c == "\\e" = editTransaction
+        | c == "\\q" = colorPutStr "CLOSING APPLICATION." Red
         | otherwise = do
             colorPutStr ("COMMAND " ++ c ++ " NOT RECOGNIZED.") Red
             continue
 
-getTransaction :: IO ()
-getTransaction = do
+addTransaction :: IO ()
+addTransaction = do
     time <- getUnixTime
     putStrLn ""
     putStrLn "Enter Transaction Amount:"
@@ -180,7 +183,6 @@ getTransaction = do
     updateFile (show transfer)
     getDest True
 
-
 clearConsole :: IO ()
 clearConsole = do
     clearScreen
@@ -193,6 +195,15 @@ write s = do
     colorPutStr "CREATED FILE." Green
     colorPutStr "RECORDED TRANSACTION." Green
     clearConsole
+
+sortIt :: IO [Transaction]
+sortIt = do
+    xs <- getTransactionRecords
+    let result = map(\x -> ((read (_amount x) :: Float), x)) xs
+    let y = sort result
+    let z = map (sec) y
+    return z
+    
 
 updateFile :: String -> IO ()
 updateFile s = do
@@ -221,6 +232,7 @@ delete del y = do
     forM_ xs (\x -> do
         updateFile $ show x
         )
+    getDest True
 
 deleteLine :: IO ()
 deleteLine = do
@@ -248,10 +260,7 @@ routeEditTransaction xs t idT = do
 editTransaction :: IO()
 editTransaction = do
     contents <- readFile file
-    xs <- mapM (\x -> do
-        let transaction = (read x :: Transaction)
-        return transaction
-        ) (lines contents)
+    xs <- getTransactionRecords
     putStrLn "Which record do you want to edit?"
     idT <- getLine
     let item = filter (\x -> (_uid x) == idT) xs
