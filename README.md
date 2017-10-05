@@ -21,7 +21,7 @@ stack exec transaction-exe
 - [ ] Encryption of Transaction File
 - [ ] Web Client for viewing data
 - [ ] Currency Exchange, Stock Information, Etc.
-- [ ] Exchange 
+- [ ] Exchange plaintext for optional AcidState DB or Other?
 
 ## Contributions
 
