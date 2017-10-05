@@ -12,3 +12,9 @@ stack setup
 stack build
 stack exec transaction-exe
 ```
+
+## Task List
+
+- [ ] Encryption
+- [ ] Web Client
+- [ ] Currency Exchange, Stock Information, Etc.
