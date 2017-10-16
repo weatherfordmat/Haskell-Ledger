@@ -37,6 +37,7 @@ executable transaction-exe
                      , split
                      , directory
                      , ansi-terminal
+                     , terminal-size
   default-language:    Haskell2010
 
 test-suite transaction-test
