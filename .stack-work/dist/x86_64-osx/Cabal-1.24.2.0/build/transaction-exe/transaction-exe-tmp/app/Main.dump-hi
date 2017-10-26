@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-10-16 21:28:43.207128 UTC
+2017-10-26 06:32:58.426512 UTC
 
 interface main@main:Main 8002
-  interface hash: 74c8594e7acf49cefb06b5cdd7238d77
-  ABI hash: 8cd9f736849673926f2871f0511a3133
-  export-list hash: e84dc5c14e1cdc091c4ad2a12593736e
+  interface hash: b3621334cb3111f29ea41df976ace797
+  ABI hash: 42f4d5d2e6084450a332fcdd4a9e4603
+  export-list hash: c7f1c1cba8a8a26d93d7d9543a2ef054
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f58b9bf178893249de22598ef7aef233
   sig of: Nothing
@@ -17,11 +17,8 @@ exports:
   Main.amount
   Main.category
   Main.change'
-  Main.clearConsole
   Main.clearFile
   Main.clearingFile
-  Main.colorPutPartial
-  Main.colorPutStr
   Main.colorTrans
   Main.cols
   Main.continue
@@ -30,7 +27,6 @@ exports:
   Main.description
   Main.editTransaction
   Main.file
-  Main.format
   Main.formatHeaders
   Main.formatTransactionOutput
   Main.getDest
@@ -38,9 +34,7 @@ exports:
   Main.getSum
   Main.getTransactionRecords
   Main.getVals
-  Main.getWidth
   Main.headers
-  Main.lookForFile
   Main.main
   Main.match'
   Main.mergeData'
@@ -55,7 +49,6 @@ exports:
   Main.updateFile
   Main.updatedAt
   Main.user
-  Main.write
   Main.Transaction{Main.Transaction _accountNum _amount _category _description _routingNumber _uid _updatedAt _user}
 module dependencies:
 package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
@@ -97,7 +90,7 @@ package dependencies: StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
                       text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
                       th-abstraction-0.2.6.0@th-abstraction-0.2.6.0-HRFJgpoqs5HJ5LgHnjmMhQ
                       time-1.6.0.1@time-1.6.0.1
-                      transaction-0.1.0.0@transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF
+                      transaction-0.1.0.0@transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl
                       transformers-0.5.2.0@transformers-0.5.2.0
                       transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-IuFogs8HAVUJBWVNMhtssu
                       unix-2.7.2.1@unix-2.7.2.1
@@ -187,7 +180,6 @@ import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
 import  -/  base-4.9.1.0:Data.Traversable 556020d7cf3c4a34a774600512918a37
 import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
 import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
-import  -/  base-4.9.1.0:GHC.Conc.IO def2d34849634fa07308965605821da6
 import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
 import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
 import  -/  base-4.9.1.0:GHC.Read b6821365d2d5fa2155c9e910160e7f57
@@ -208,9 +200,10 @@ import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens.Type 699
 import  -/  split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT:Data.List.Split 272c5cfa667e04d85d90f02a3d135474
 import  -/  split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT:Data.List.Split.Internals be3228c161b442fb4a76d9ed8518c1ed
 import  -/  template-haskell-2.11.1.0:Language.Haskell.TH d856a1f9d606be57026da48a46c8b0a9
-import  -/  terminal-size-0.3.2.1@terminal-size-0.3.2.1-LL700oIgYTEEtJWQuzY2Y4:System.Console.Terminal.Common babceb8b2af9c062dfa5e5bf8cd5715b
 import  -/  terminal-size-0.3.2.1@terminal-size-0.3.2.1-LL700oIgYTEEtJWQuzY2Y4:System.Console.Terminal.Size 91c3153dec9932a7771303a1241cd66b
-import  -/  transaction-0.1.0.0@transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF:Lib 00daf2e4af599d8ee98168c920f76d7e
+import  -/  transaction-0.1.0.0@transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl:CRUD 0a60c62733a82c5cf525e25dd16cab2a
+import  -/  transaction-0.1.0.0@transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl:Formatting df1b2f8585a70f79bfdeb1dbd765c7d5
+import  -/  transaction-0.1.0.0@transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl:Lib 07e4d1820edd1b35f7c982ba5a2c9a4e
 import  -/  unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime 34ee891a10baf97f1ce65eb8d2c5de3e
 import  -/  unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime.Sys 7674c4bbcf1e5de2a58d39d850eb495a
 import  -/  unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime.Types e5700e4fdf011dd3e496b922659e53d6
@@ -1057,79 +1050,6 @@ b7d910d468100c8de8e15d4ef97a9d73
   {- Arity: 10,
      Strictness: <S,U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,1*U><L,U>,
      Inline: [0] -}
-4784362a9effc994cd1dd58d4f9e0798
-  $wformat ::
-    GHC.Prim.Int#
-    -> GHC.Base.String
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, Strictness: <S,U><L,U><S,U>, Inline: [0],
-     Unfolding: (\ (ww :: GHC.Prim.Int#)
-                   (w :: GHC.Base.String)
-                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 let {
-                   y :: GHC.Prim.Int# = GHC.Prim.-# ww 1#
-                 } in
-                 case GHC.Prim.tagToEnum#
-                        @ GHC.Types.Bool
-                        (GHC.Prim.># 1# y) of wild {
-                   GHC.Types.False
-                   -> letrec {
-                        go4 :: GHC.Prim.Int#
-                               -> GHC.Prim.State# GHC.Prim.RealWorld
-                               -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-                          {- Arity: 2, Strictness: <L,U><L,U> -}
-                        = \ (x :: GHC.Prim.Int#)
-                            (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                          case {__pkg_ccall base-4.9.1.0 rtsSupportsBoundThreads GHC.Prim.State#
-                                                                                   GHC.Prim.RealWorld
-                                                                                 -> (# GHC.Prim.State#
-                                                                                         GHC.Prim.RealWorld,
-                                                                                       GHC.Prim.Int# #)}
-                                 GHC.Prim.realWorld# of wild1 { (#,#) ds ds1 ->
-                          case ds1 of wild2 {
-                            DEFAULT
-                            -> case GHC.Event.Thread.$wthreadDelay
-                                      (GHC.Prim.*# x 5#)
-                                      eta of ds2 { (#,#) ipv ipv1 ->
-                               case GHC.IO.Handle.Text.hPutStr2
-                                      GHC.IO.Handle.FD.stdout
-                                      w
-                                      GHC.Types.False
-                                      ipv of ds3 { (#,#) ipv2 ipv3 ->
-                               case GHC.Prim.tagToEnum#
-                                      @ GHC.Types.Bool
-                                      (GHC.Prim.==# x y) of wild3 {
-                                 GHC.Types.False -> go4 (GHC.Prim.+# x 1#) ipv2
-                                 GHC.Types.True -> (# ipv2, GHC.Tuple.() #) } } }
-                            0#
-                            -> case GHC.Prim.delay#
-                                      @ GHC.Prim.RealWorld
-                                      (GHC.Prim.*# x 5#)
-                                      eta of s' { DEFAULT ->
-                               case GHC.IO.Handle.Text.hPutStr2
-                                      GHC.IO.Handle.FD.stdout
-                                      w
-                                      GHC.Types.False
-                                      s' of ds2 { (#,#) ipv ipv1 ->
-                               case GHC.Prim.tagToEnum#
-                                      @ GHC.Types.Bool
-                                      (GHC.Prim.==# x y) of wild3 {
-                                 GHC.Types.False -> go4 (GHC.Prim.+# x 1#) ipv
-                                 GHC.Types.True -> (# ipv, GHC.Tuple.() #) } } } } }
-                      } in
-                      case go4 1# w1 of ds1 { (#,#) ipv ipv1 ->
-                      GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        (GHC.Types.[] @ GHC.Types.Char)
-                        GHC.Types.True
-                        ipv }
-                   GHC.Types.True
-                   -> GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        (GHC.Types.[] @ GHC.Types.Char)
-                        GHC.Types.True
-                        w1 }) -}
 b4276c6e6a4bded23b0b7e063df7a33d
   $wlvl ::
     Main.Transaction -> (# GHC.Types.Float, Main.Transaction #)
@@ -1416,61 +1336,6 @@ ffc268b22579a0af3dab70ee8d0c5936
                           go4 ys ipv } }
                  } in
                  go4 eta eta1) -}
-7f505376fc71d333c92d76eebce014df
-  clearConsole :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.clearConsole1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-de05019ca6b29543277a85752c182679
-  clearConsole1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        System.Console.ANSI.Codes.clearScreenCode
-                        GHC.Types.False
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 Main.clearConsole2 ipv }) -}
-a0d1080713275dd14566244c6211bdb7
-  clearConsole2 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (eta :: GHC.Prim.State#
-                             GHC.Prim.RealWorld)[OneShot] ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   Main.clearConsole3
-                   GHC.Types.False
-                   eta) -}
-9718a41c02228026b6127e9787e93dca
-  clearConsole3 :: GHC.Base.String
-  {- Unfolding: (System.Console.ANSI.Codes.csi
-                   Main.clearConsole4
-                   System.Console.ANSI.Codes.setCursorPositionCode1) -}
-10510d8f9b9d3576a30fa598cbad6228
-  clearConsole4 :: [GHC.Types.Int]
-  {- HasNoCafRefs,
-     Unfolding: (GHC.Types.:
-                   @ GHC.Types.Int
-                   Main.clearConsole7
-                   Main.clearConsole5) -}
-400fbb90d53be00c357e9a72ad7b4086
-  clearConsole5 :: [GHC.Types.Int]
-  {- HasNoCafRefs,
-     Unfolding: (GHC.Types.:
-                   @ GHC.Types.Int
-                   Main.clearConsole6
-                   (GHC.Types.[] @ GHC.Types.Int)) -}
-d65e30b0c0dbb6e0da74ff49c58b651b
-  clearConsole6 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1#) -}
-79745369254157542c9993775637efdd
-  clearConsole7 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2#) -}
 e63775ad882bdc4e6cbc4d9d0da73239
   clearFile :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
@@ -1494,115 +1359,7 @@ f646c45e94ebd788bb2b84cd6b0160bb
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-f3ac61efbf213411df7267600d6ace28
-  colorPutPartial ::
-    GHC.Base.String
-    -> System.Console.ANSI.Types.Color -> GHC.Types.IO ()
-  {- Arity: 3, Strictness: <L,1*U><L,U><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.colorPutPartial1
-                  `cast`
-                (<GHC.Base.String>_R
-                 ->_R <System.Console.ANSI.Types.Color>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-0c3a28909c254bba14dca02ca4c8a98d
-  colorPutPartial1 ::
-    GHC.Base.String
-    -> System.Console.ANSI.Types.Color
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, Strictness: <L,1*U><L,U><S,U>,
-     Unfolding: (\ (x :: GHC.Base.String)
-                   (color :: System.Console.ANSI.Types.Color)
-                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        (System.Console.ANSI.Codes.csi
-                           (GHC.Types.:
-                              @ GHC.Types.Int
-                              (case System.Console.ANSI.Codes.$wsgrToCode
-                                      (System.Console.ANSI.Types.SetColor
-                                         System.Console.ANSI.Types.Foreground
-                                         System.Console.ANSI.Types.Vivid
-                                         color) of ww { DEFAULT ->
-                               GHC.Types.I# ww })
-                              (GHC.Types.[] @ GHC.Types.Int))
-                           System.Console.ANSI.Codes.setSGRCode1)
-                        GHC.Types.False
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        x
-                        GHC.Types.False
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   Main.colorPutPartial2
-                   GHC.Types.False
-                   ipv2 } }) -}
-8d446330b470f429d3ce1a101f46c5bb
-  colorPutPartial2 :: GHC.Base.String
-  {- Unfolding: (System.Console.ANSI.Codes.csi
-                   Main.colorPutPartial3
-                   System.Console.ANSI.Codes.setSGRCode1) -}
-f3db28022ed4f75048caaf4bd96ded3b
-  colorPutPartial3 :: [GHC.Types.Int]
-  {- Unfolding: (GHC.Types.:
-                   @ GHC.Types.Int
-                   Main.colorPutPartial4
-                   (GHC.Types.[] @ GHC.Types.Int)) -}
-1391963872a26c8966569b00ef35ea2b
-  colorPutPartial4 :: GHC.Types.Int
-  {- Unfolding: (case System.Console.ANSI.Codes.$wsgrToCode
-                        System.Console.ANSI.Types.Reset of ww { DEFAULT ->
-                 GHC.Types.I# ww }) -}
-0b2952689ca09f284652b250be3a9212
-  colorPutStr ::
-    GHC.Base.String
-    -> System.Console.ANSI.Types.Color -> GHC.Types.IO ()
-  {- Arity: 3, Strictness: <L,1*U><L,U><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.colorPutStr1
-                  `cast`
-                (<GHC.Base.String>_R
-                 ->_R <System.Console.ANSI.Types.Color>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-8b9597e103822ea31129de851b307f4c
-  colorPutStr1 ::
-    GHC.Base.String
-    -> System.Console.ANSI.Types.Color
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, Strictness: <L,1*U><L,U><S,U>,
-     Unfolding: (\ (x :: GHC.Base.String)
-                   (color :: System.Console.ANSI.Types.Color)
-                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        (System.Console.ANSI.Codes.csi
-                           (GHC.Types.:
-                              @ GHC.Types.Int
-                              (case System.Console.ANSI.Codes.$wsgrToCode
-                                      (System.Console.ANSI.Types.SetColor
-                                         System.Console.ANSI.Types.Foreground
-                                         System.Console.ANSI.Types.Vivid
-                                         color) of ww { DEFAULT ->
-                               GHC.Types.I# ww })
-                              (GHC.Types.[] @ GHC.Types.Int))
-                           System.Console.ANSI.Codes.setSGRCode1)
-                        GHC.Types.False
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        x
-                        GHC.Types.True
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   Main.colorPutPartial2
-                   GHC.Types.False
-                   ipv2 } }) -}
-e963b7599f13def79c9627e066544d9c
+c9f8c6808addc54d62f88e1cf130b333
   colorTrans ::
     Main.Transaction
     -> System.Console.ANSI.Types.Color -> GHC.Types.IO ()
@@ -1613,7 +1370,7 @@ e963b7599f13def79c9627e066544d9c
                 (<Main.Transaction>_R
                  ->_R <System.Console.ANSI.Types.Color>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-1d3c2cb6b43997c3246dd88404f24e0b
+1eb3999347b6df27e041342899ae8b8e
   colorTrans1 ::
     Main.Transaction
     -> System.Console.ANSI.Types.Color
@@ -1651,7 +1408,7 @@ e963b7599f13def79c9627e066544d9c
                    (GHC.Types.[] @ GHC.Types.Char)
                    GHC.Types.True
                    ipv }) -}
-1a1eb8283d39e4385d331ae45d2b6a21
+a3d55b1ce36838bcfd6947af3856fc25
   colorTrans2 ::
     (Data.Foldable.Foldable t, GHC.Classes.Ord (t a)) =>
     (Main.Transaction -> t a)
@@ -1670,7 +1427,7 @@ e963b7599f13def79c9627e066544d9c
                    (c :: System.Console.ANSI.Types.Color)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case Main.colorTrans3 eta of ds1 { (#,#) ipv ipv1 ->
-                 Main.colorPutPartial1
+                 Formatting.colorPutPartial1
                    (GHC.CString.unpackAppendCString#
                       "| "#
                       (GHC.Base.++
@@ -1699,7 +1456,7 @@ e963b7599f13def79c9627e066544d9c
                             GHC.Types.True -> Main.$wxs y } } })))
                    c
                    ipv }) -}
-57e43425e788a53926dfa2712a96190c
+835d3f7298fd13704fab19d00a329944
   colorTrans3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Main.Transaction] #)
@@ -1719,7 +1476,7 @@ e963b7599f13def79c9627e066544d9c
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Main.Transaction] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-fc251cde2ec660e271c65ee2277c48f3
+538a6f26543a37ef3890fbdb4914a996
   cols ::
     (Data.Foldable.Foldable t, GHC.Classes.Ord (t a)) =>
     (Main.Transaction -> t a)
@@ -1794,12 +1551,12 @@ bb05118d004ca88fb53dde2ee8621fec
                    (\ (y1 :: GHC.Base.String) ->
                     Main.Transaction x1 x2 x3 x4 x5 y1 x7 x8)
                    (f1 x6) }) -}
-0a657a72ccbc39a304772e7e169a23e1
+e0a7f7cabb0d5fe5f2d0741823a4a681
   editTransaction :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.editTransaction1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-49dff7f17542fcbc3a36450842ef528b
+58e6c6bdebcd6f4323238063dbe87246
   editTransaction1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1834,7 +1591,7 @@ bb05118d004ca88fb53dde2ee8621fec
                          GHC.Base.eqString ds ipv9 })
                         ipv5 of wild {
                    []
-                   -> Main.colorPutStr1
+                   -> Formatting.colorPutStr1
                         Main.editTransaction8
                         System.Console.ANSI.Types.Red
                         ipv8
@@ -1860,7 +1617,7 @@ bb05118d004ca88fb53dde2ee8621fec
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 4,
      Strictness: <L,1*U><L,1*U(U,U,U,U,U,U,U,U)><L,U><S,U> -}
-8aac88d723524980a66ea4b1af959122
+fca6a0bea789ffd70911815bc4f8d567
   editTransaction3 ::
     Main.Transaction
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1921,31 +1678,10 @@ b0e7c8d9a63053687bc791bcad001182
   editTransaction9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Which record do you want to edit?"#) -}
-2613b93b855b9bc20b933e684ec3e9eb
+d152ef0574373a97148abd85ddb59de5
   file :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "./transactions.txt"#) -}
-2e3551d47604d9b9acf5f514dee9f6df
-  format :: GHC.Types.Int -> GHC.Base.String -> GHC.Types.IO ()
-  {- Arity: 3, Strictness: <S(S),1*U(U)><L,U><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.format1
-                  `cast`
-                (<GHC.Types.Int>_R
-                 ->_R <GHC.Base.String>_R
-                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-830b03b5782b157a034776e671f6c7a8
-  format1 ::
-    GHC.Types.Int
-    -> GHC.Base.String
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, Strictness: <S(S),1*U(U)><L,U><S,U>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (3, True, False)
-                (\ (w :: GHC.Types.Int)
-                   (w1 :: GHC.Base.String)
-                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case w of ww { GHC.Types.I# ww1 -> Main.$wformat ww1 w1 w2 }) -}
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "./.transactions.txt"#) -}
 d950177a7ee0089cd79129b16480c77c
   formatHeaders :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
@@ -1966,7 +1702,7 @@ d950177a7ee0089cd79129b16480c77c
                    (GHC.Types.[] @ GHC.Types.Char)
                    GHC.Types.True
                    ipv }) -}
-139781ca0f9db7e25d3a03374b5516a2
+b8d87577756bb3922282c6804c38470a
   formatTransactionOutput :: Main.Transaction -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U(U,U,U,U,U,U,U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -2006,7 +1742,7 @@ cca56493580efa683196ff08a0063469
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U> -}
-2f25e2c951a88b4e2b48167998b37350
+741ab5ba8edee240447fecbee24c1179
   getTransactionRecords :: GHC.Types.IO [Main.Transaction]
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -2080,38 +1816,6 @@ ee36550b798601c5ce9fd8ce19e685df
   getVals3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "What is the new value?"#) -}
-11012464274b00cd819e6c9edc7f6a00
-  getWidth :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.getWidth1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-405bed341d7dcd007bb02cf249c6cd81
-  getWidth1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case System.Console.Terminal.Posix.fdSize1
-                        @ GHC.Types.Int
-                        GHC.Real.$fIntegralInt
-                        System.Console.Terminal.Posix.size2
-                          `cast`
-                        (Trans
-                             (Sym (Foreign.C.Types.N:CInt[0]))
-                             (Sym (System.Posix.Types.N:Fd[0])))
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case ipv1 of wild {
-                   GHC.Base.Nothing
-                   -> case Data.Maybe.fromJust1
-                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-                      of {}
-                   GHC.Base.Just x
-                   -> case x of wild1 { System.Console.Terminal.Common.Window ds2 ds3 ->
-                      case ds3 of ww { GHC.Types.I# ww1 ->
-                      Main.$wformat ww1 Main.getWidth2 ipv } } } }) -}
-90c6bd98a72abb2b4493119d2e6f89fb
-  getWidth2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "-"#) -}
 b70f4882e14dd90efc80f48579120ce0
   headers ::
     [(Main.Transaction -> GHC.Base.String, [GHC.Types.Char])]
@@ -2219,55 +1923,12 @@ e0c38c8643f3f2692b48b9acce3d77da
 cdba2c67da5cc0ae36bc9e8db3790dfc
   headers9 :: (Main.Transaction -> GHC.Base.String, [GHC.Types.Char])
   {- Strictness: m, Unfolding: ((Main._updatedAt, Main.headers10)) -}
-1fa6df67e41bd183d74eec8a04880151
-  lookForFile :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.lookForFile1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-efc447a24a32c08bcb91578c167a967c
-  lookForFile1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case Main.lookForFile2
-                        `cast`
-                      (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 Main.getDest1 ipv1 ipv }) -}
-479d246eae99ee3a7c589bff3a79a216
-  lookForFile2 :: GHC.Types.IO GHC.Types.Bool
-  {- Unfolding: (Main.lookForFile3
-                   System.Directory.doesDirectoryExist1
-                     `cast`
-                   (<GHC.IO.Exception.IOError>_R
-                    ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))) -}
-3b45966ac0ff6e41d00cc5710a28fde9
-  lookForFile3 ::
-    (GHC.IO.Exception.IOError -> GHC.Types.IO GHC.Types.Bool)
-    -> GHC.Types.IO GHC.Types.Bool
-  {- Unfolding: (System.IO.Error.catchIOError
-                   @ GHC.Types.Bool
-                   Main.lookForFile4
-                     `cast`
-                   (Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))) -}
-4c171f34f3e460bbc2adac52e51aa948
-  lookForFile4 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
-  {- Arity: 1,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case System.Posix.Files.getFileStatus1
-                        Main.file
-                        s of ds10 { (#,#) ipv ipv1 ->
-                 System.Directory.doesFileExist1 ipv1 ipv }) -}
-2e3417ac847ed584dbdd8cb8142a952f
+6dbcab078e17d5be811ddc7534ebf7a0
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-7d472e2dccdc891a6d9fe742bb5319ce
+7b0ba15981f902b46a5ec7362ee31dc8
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -2275,29 +1936,51 @@ efc447a24a32c08bcb91578c167a967c
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case GHC.IO.Handle.Text.hPutStr2
                         GHC.IO.Handle.FD.stdout
-                        Main.main2
+                        Main.main4
                         GHC.Types.False
                         s of ds1 { (#,#) ipv ipv1 ->
-                 case Main.lookForFile2
+                 case (Main.main2
+                         System.Directory.doesDirectoryExist1
+                           `cast`
+                         (<GHC.IO.Exception.IOError>_R
+                          ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)))
                         `cast`
                       (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
                  Main.getDest1 ipv3 ipv2 } }) -}
-5c606b23958a96ce564d96607e1c7cc9
-  main2 :: [GHC.Types.Char]
+690764ca54928b1a2c36c33bca23a3a3
+  main2 ::
+    (GHC.IO.Exception.IOError -> GHC.Types.IO GHC.Types.Bool)
+    -> GHC.Types.IO GHC.Types.Bool
+  {- Unfolding: (System.IO.Error.catchIOError
+                   @ GHC.Types.Bool
+                   Main.main3 `cast` (Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R))) -}
+1bbafcef1e5bf8616d973aef63bff4f3
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Posix.Files.getFileStatus1
+                        Main.file
+                        s1 of ds10 { (#,#) ipv ipv1 ->
+                 System.Directory.doesFileExist1 ipv1 ipv }) -}
+013be179061650d5e0e47199dea542b0
+  main4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackAppendCString#
                    "\ESC]0;"#
-                   Main.main3) -}
-248f5fb483c7ee232593820d4c274251
-  main3 :: [GHC.Types.Char]
+                   Main.main5) -}
+0d99385b6df2b42e6cb6728e168b0ce1
+  main5 :: [GHC.Types.Char]
   {- Unfolding: (System.Console.ANSI.Codes.setTitleCode_go
-                   Main.main4) -}
-d4c5f3c197926b29f1987a1e33226784
-  main4 :: [GHC.Types.Char]
+                   Main.main6) -}
+5f0a6013ddeaa1917ebadec84e3edaf1
+  main6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Banking Transactions"#) -}
-f657fb5e95444810d1d1f6930e7de085
-  main5 ::
+250cc3d96eb3a9bd505c0ad14b615a7b
+  main7 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
@@ -2586,14 +2269,14 @@ e9fe31ee0152307c85936d75ba4ddc21
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ @ t @ t1 (ds :: (t, t1)) -> case ds of wild { (,) x y -> y }) -}
-72b35cc1dfaea37fedf176ccc52ad4e4
+98c3214fc1e443b2e2b255094a6ca8f9
   sortIt :: GHC.Types.IO [Main.Transaction]
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.sortIt1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <[Main.Transaction]>_R)) -}
-68138cc4879a130254692d8e9ed26d84
+e3a0bef5099f49cb6a7188accfd2fc01
   sortIt1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Main.Transaction] #)
@@ -2720,14 +2403,14 @@ e9fe31ee0152307c85936d75ba4ddc21
                         GHC.Types.True -> Main.Transaction ww1 ww2 ww3 ww4 ww5 ww6 w1 ww8 }
                    GHC.Types.True
                    -> Main.Transaction ww1 ww2 w1 ww4 ww5 ww6 ww7 ww8 } }) -}
-5ddc0fac1d762c6b7712b3c0dc49188e
+93f262b5fa5f21305001f3523c18dd1c
   updateFile :: GHC.Base.String -> GHC.Types.IO ()
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.updateFile1
                   `cast`
                 (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-9df0fd4a39835c6ac21f76e90a243bcb
+0f7a9f820e476f8517583fa0472b79ca
   updateFile1 ::
     GHC.Base.String
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2740,27 +2423,22 @@ e9fe31ee0152307c85936d75ba4ddc21
                         Main.file
                         s
                         eta of ds1 { (#,#) ipv ipv1 ->
-                 case System.IO.appendFile1
-                        Main.file
-                        Main.updateFile4
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 Main.updateFile2 ipv2 } }) -}
-13c58d04f9ff8c269f05dc03798beef6
+                 Main.updateFile2 ipv }) -}
+e21967161d06ebe2ca79aaa975ef98e6
   updateFile2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case Main.colorPutStr1
+                 case System.IO.appendFile1
+                        Main.file
+                        Main.updateFile4
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Formatting.colorPutStr1
                         Main.updateFile3
                         System.Console.ANSI.Types.Green
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        System.Console.ANSI.Codes.clearScreenCode
-                        GHC.Types.False
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 Main.clearConsole2 ipv2 } }) -}
+                 Formatting.clearConsole1 ipv2 } }) -}
 a6151b845ae25c67f40e00f7af2ae28f
   updateFile3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
@@ -2807,46 +2485,6 @@ b41a52895c3867879dd157b11e421ed5
                    (\ (y1 :: GHC.Base.String) ->
                     Main.Transaction x1 y1 x3 x4 x5 x6 x7 x8)
                    (f1 x2) }) -}
-90743ee41189d0bdb91adc070837c3a2
-  write :: GHC.Base.String -> GHC.Types.IO ()
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.write1
-                  `cast`
-                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5db275e9026d7aa70de7fb0e939344ec
-  write1 ::
-    GHC.Base.String
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 2, Strictness: <L,U><S,U>,
-     Unfolding: (\ (s :: GHC.Base.String)
-                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case System.IO.writeFile1
-                        Main.file
-                        s
-                        eta of ds1 { (#,#) ipv ipv1 ->
-                 case System.IO.writeFile1
-                        Main.file
-                        Main.updateFile4
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 case Main.colorPutStr1
-                        Main.write2
-                        System.Console.ANSI.Types.Green
-                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
-                 case Main.colorPutStr1
-                        Main.updateFile3
-                        System.Console.ANSI.Types.Green
-                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        System.Console.ANSI.Codes.clearScreenCode
-                        GHC.Types.False
-                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
-                 Main.clearConsole2 ipv8 } } } } }) -}
-91a121bc4bfbf323411964934747e74c
-  write2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "CREATED FILE."#) -}
 instance GHC.Classes.Eq [Main.Transaction] = Main.$fEqTransaction
 instance GHC.Classes.Ord [Main.Transaction] = Main.$fOrdTransaction
 instance GHC.Read.Read [Main.Transaction] = Main.$fReadTransaction

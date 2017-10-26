@@ -49,19 +49,19 @@
   (major1) == 2 && (major2) <  11 || \
   (major1) == 2 && (major2) == 11 && (minor) <= 1)
 
-/* package unix-time-0.3.7 */
-#define VERSION_unix_time "0.3.7"
-#define MIN_VERSION_unix_time(major1,major2,minor) (\
-  (major1) <  0 || \
-  (major1) == 0 && (major2) <  3 || \
-  (major1) == 0 && (major2) == 3 && (minor) <= 7)
-
 /* package terminal-size-0.3.2.1 */
 #define VERSION_terminal_size "0.3.2.1"
 #define MIN_VERSION_terminal_size(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  3 || \
   (major1) == 0 && (major2) == 3 && (minor) <= 2)
+
+/* package unix-time-0.3.7 */
+#define VERSION_unix_time "0.3.7"
+#define MIN_VERSION_unix_time(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 7)
 
 /* tool gcc-4.2.1 */
 #define TOOL_VERSION_gcc "4.2.1"
@@ -112,7 +112,7 @@
   (major1) == 0 && (major2) <  29 || \
   (major1) == 0 && (major2) == 29 && (minor) <= 2)
 
-#define CURRENT_COMPONENT_ID "transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF"
+#define CURRENT_COMPONENT_ID "transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl"
 
-#define CURRENT_PACKAGE_KEY "transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF"
+#define CURRENT_PACKAGE_KEY "transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl"
 

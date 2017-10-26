@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/utopia/Documents/code.nosync/Haskell/Haskell-Ledger/transaction/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/bin"
-libdir     = "/Users/utopia/Documents/code.nosync/Haskell/Haskell-Ledger/transaction/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/lib/x86_64-osx-ghc-8.0.2/transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF"
+libdir     = "/Users/utopia/Documents/code.nosync/Haskell/Haskell-Ledger/transaction/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/lib/x86_64-osx-ghc-8.0.2/transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl"
 dynlibdir  = "/Users/utopia/Documents/code.nosync/Haskell/Haskell-Ledger/transaction/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/lib/x86_64-osx-ghc-8.0.2"
 datadir    = "/Users/utopia/Documents/code.nosync/Haskell/Haskell-Ledger/transaction/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/share/x86_64-osx-ghc-8.0.2/transaction-0.1.0.0"
 libexecdir = "/Users/utopia/Documents/code.nosync/Haskell/Haskell-Ledger/transaction/.stack-work/install/x86_64-osx/lts-9.6/8.0.2/libexec"

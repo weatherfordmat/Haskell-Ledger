@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-10-16 21:24:30.707881 UTC
+2017-10-26 05:38:54.134462 UTC
 
-interface transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF:Lib 8002
-  interface hash: 2754802d54e7102ef7da453990fea941
-  ABI hash: 00daf2e4af599d8ee98168c920f76d7e
-  export-list hash: 1d2f216ec43c471b27e6b81418537d66
+interface transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl:Lib 8002
+  interface hash: 0a24dc0f20a354a93a13d3350e80ffb0
+  ABI hash: 07e4d1820edd1b35f7c982ba5a2c9a4e
+  export-list hash: 693136ee72ec4b1bea8794043236c675
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 76adf31fae06a88e0bf510b5d268b7c5
   sig of: Nothing
@@ -124,7 +124,7 @@ import  -/  lens-4.15.4@lens-4.15.4-Km66e7WFRbEC7HnDdV2JDW:Control.Lens 51c28281
 import  -/  template-haskell-2.11.1.0:Language.Haskell.TH d856a1f9d606be57026da48a46c8b0a9
 import  -/  template-haskell-2.11.1.0:Language.Haskell.TH.Lib 715cf040319ba19bc69da4853519bde7
 import  -/  template-haskell-2.11.1.0:Language.Haskell.TH.Syntax f73a6f51a55e744c097972689232ddf4
-9cee2b1b74df30bd253e0d99a02d2987
+6223394fc45e3c0e7111a65e4c201c86
   $slift3 ::
     [GHC.Types.Char]
     -> Language.Haskell.TH.Syntax.Q Language.Haskell.TH.Syntax.Exp
@@ -139,20 +139,20 @@ import  -/  template-haskell-2.11.1.0:Language.Haskell.TH.Syntax f73a6f51a55e744
                                        <Language.Haskell.TH.Syntax.Exp>_N))
                         (Sym (Language.Haskell.TH.Syntax.N:Lift[0]
                                   <GHC.Types.Char>_N)))) -}
-0e7ab00702a3b1790d0e2283d5ae7e8d
+5a5e546274e0d350ff4bec6cb08f2e60
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-d13082c4eeb0af67341df36ffc89ea92
+de8decf8c478258b13f8f03044676f15
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-88c68cbf1a86a905741a392d33e3a8a1
+c45617d6545f3426b972da25269f2487
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "transaction-0.1.0.0-KNKD29HfKlG2F3Lp67jWvF"#) -}
-f6291993af45e5d569548340dc78cdee
+                   "transaction-0.1.0.0-8uOaLxsteoo80COzXKWxl"#) -}
+ac329caea697a1a6c7dcce319e020dab
   fieldNames ::
     Language.Haskell.TH.Syntax.Name -> Language.Haskell.TH.Lib.ExpQ
   {- Arity: 2,
@@ -163,7 +163,7 @@ f6291993af45e5d569548340dc78cdee
                 (<Language.Haskell.TH.Syntax.Name>_R
                  ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
                                <Language.Haskell.TH.Syntax.Exp>_N)) -}
-44aa19cbca625f81693306abd0fcec34
+5aab957987f7472c396b11b5f6f3417f
   fieldNames1 ::
     Language.Haskell.TH.Syntax.Name
     -> forall (m :: * -> *).
@@ -234,15 +234,15 @@ f6291993af45e5d569548340dc78cdee
                                    @ m
                                    eta)
                                 lvl2 } })) -}
-ef5a10e231a286419cf9f69a5c109466
+9779dace89608c38c74c68b7bfecc626
   fieldNames2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Pattern match failure in do expression at src/Lib.hs:23:5-41"#) -}
-2e80e296f9c1f73cb85607f23c8ed2c9
+74cd366f5dd6525afaab6ccc857fef3c
   fieldNames_go ::
     [Language.Haskell.TH.Syntax.Con] -> [GHC.Base.String]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
-6b7726a7e125aa4372a64694a78cc34a
+6deed1d60af081591943fe85c197c38a
   listFields ::
     Language.Haskell.TH.Syntax.Name
     -> Language.Haskell.TH.Syntax.Q [GHC.Base.String]
@@ -254,7 +254,7 @@ ef5a10e231a286419cf9f69a5c109466
                 (<Language.Haskell.TH.Syntax.Name>_R
                  ->_R Sym (Language.Haskell.TH.Syntax.N:Q[0]
                                <[GHC.Base.String]>_N)) -}
-c21bce676b7946aafe8f11c3e9346282
+a27407e0b819c4d4c0d6336fd2fc3234
   listFields1 ::
     Language.Haskell.TH.Syntax.Name
     -> forall (m :: * -> *).
@@ -303,11 +303,11 @@ c21bce676b7946aafe8f11c3e9346282
                                 lvl4
                                 @ [GHC.Base.String]
                                 (Lib.listFields_go cons) } })) -}
-7cfe3a3ba79ee24f66cb44645169f846
+3a833ef21bb7d7f34f51581d69e9f691
   listFields2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Pattern match failure in do expression at src/Lib.hs:16:3-31"#) -}
-078216a9edcf16e1d993a3829697aa20
+36279e72e4cd98526389e52d69eee5c1
   listFields_go ::
     [Language.Haskell.TH.Syntax.Con] -> [GHC.Base.String]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}

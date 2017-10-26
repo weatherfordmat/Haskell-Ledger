@@ -2,12 +2,17 @@
 
 module Main where
     
+-- Custom Libs    
 import Lib
+import Formatting
+import CRUD
 
+-- Packages
 import Control.Lens
-import System.Directory
+
 import System.Console.ANSI
 import Language.Haskell.TH
+import System.Directory
 import Control.Concurrent
 import Control.Monad
 import System.IO
@@ -19,7 +24,8 @@ import Data.List (sort, sortBy)
 import Data.Maybe
 import System.Console.Terminal.Size
 
-file = "./transactions.txt"
+file = "./.transactions.txt"
+
 headers = [(_uid, "ID"), (_amount, "AMOUNT ($)"), (_user, "USER"), (_routingNumber, "RTNG #"), (_accountNum, "ACCT #"), (_updatedAt, "UPDATED AT"), (_description, "DESC")]
 
 -- Basic Bank Transaction
@@ -46,6 +52,15 @@ match' x = case x of
     "amount" -> amount
     "updatedAt" -> updatedAt
 
+cols :: (Foldable t, Ord (t a)) => (Transaction -> t a) -> [Char] -> Color -> IO ()
+cols n o c = do
+    xs <- getTransactionRecords
+    let result = map(\x -> n x) xs
+    let s = length $ maximum $ result
+    let st = s - (length o) + 5
+    let output = "| " ++ o ++ (replicate st ' ')
+    colorPutPartial output c
+
 -- fullUpdate t = foldl (\x y -> x .y) (uid .~ (_uid t)) [(user .~ "MBW")] $ t
 update :: [Char] -> String -> Transaction -> Transaction
 update field val t = ((match' field) .~ val) t
@@ -61,15 +76,6 @@ getTransactionRecords = do
         return transaction
         ) (lines contents)
     return xs
-
-cols :: (Foldable t, Ord (t a)) => (Transaction -> t a) -> [Char] -> Color -> IO ()
-cols n o c = do
-    xs <- getTransactionRecords
-    let result = map(\x -> n x) xs
-    let s = length $ maximum $ result
-    let st = s - (length o) + 5
-    let output = "| " ++ o ++ (replicate st ' ')
-    colorPutPartial output c
 
 formatHeaders :: IO ()
 formatHeaders = do
@@ -101,29 +107,6 @@ getVals = do
     time <- getUnixTime
     let updatedAt = show $ utSeconds time
     return [val, uid, updatedAt]
-
-colorPutPartial :: String -> Color -> IO ()
-colorPutPartial x color = do
-    setSGR [SetColor Foreground Vivid color]
-    putStr x
-    setSGR [Reset]
-
-colorPutStr :: String -> Color -> IO ()
-colorPutStr x color = do
-    setSGR [SetColor Foreground Vivid color]
-    putStrLn x
-    setSGR [Reset]
-
-lookForFile :: IO ()
-lookForFile = do 
-    x <- doesFileExist file
-    getDest x
-
-getWidth :: IO ()
-getWidth = do
-    result <- size
-    let val = width $ fromJust result
-    format val "-"
 
 getDest :: Bool -> IO ()
 getDest x 
@@ -183,19 +166,6 @@ addTransaction = do
     updateFile (show transfer)
     getDest True
 
-clearConsole :: IO ()
-clearConsole = do
-    clearScreen
-    setCursorPosition 1 0
-
-write :: String -> IO ()
-write s = do
-    writeFile file s
-    writeFile file "\n"
-    colorPutStr "CREATED FILE." Green
-    colorPutStr "RECORDED TRANSACTION." Green
-    clearConsole
-
 sortIt :: IO [Transaction]
 sortIt = do
     xs <- getTransactionRecords
@@ -203,7 +173,16 @@ sortIt = do
     let y = sort result
     let z = map (sec) y
     return z
-    
+
+
+delete :: String -> [Transaction] -> IO ()
+delete del y = do
+    writeFile file ""
+    let xs = filter (\x -> (_uid x) /= del) y
+    forM_ xs (\x -> do
+        updateFile $ show x
+        )
+    getDest True
 
 updateFile :: String -> IO ()
 updateFile s = do
@@ -224,15 +203,6 @@ clearingFile answer
         colorPutStr "Deleting File" Red
         removeFile file
     | otherwise = getDest True
-
-delete :: String -> [Transaction] -> IO ()
-delete del y = do
-    writeFile file ""
-    let xs = filter (\x -> (_uid x) /= del) y
-    forM_ xs (\x -> do
-        updateFile $ show x
-        )
-    getDest True
 
 deleteLine :: IO ()
 deleteLine = do
@@ -294,13 +264,6 @@ getIncome = do
     print $ sum income
     continue
 
-format :: Int -> String -> IO ()
-format n s = do
-    forM_ [1..(n-1)] $ (\x -> do
-        threadDelay (x*5)
-        putStr s)
-    putStrLn ""
-
 names :: [[Char]]
 names = do
     let x = $(fieldNames ''Transaction)
@@ -310,4 +273,4 @@ names = do
 main :: IO ()
 main = do
     setTitle "Banking Transactions"
-    lookForFile
+    lookForFile file getDest
